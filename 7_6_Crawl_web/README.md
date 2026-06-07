@@ -53,3 +53,4 @@ TTTN/
             ├── js/            # Chứa các tệp script (.js)
             └── img/           # Chứa các tệp hình ảnh (.png, .jpg, .jpeg, .webp)
 ```
+Lưu ý: Đây là bài tập mục đích phục vụ học tập
