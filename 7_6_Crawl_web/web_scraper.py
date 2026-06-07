@@ -45,7 +45,7 @@ def get_unique_filename(url, folder_path, default_ext=""):
 
 def download_web_assets(url):
     print("==================================================")
-    print("        TIẾN TRÌNH CÀO GIAO DIỆN WEBSITE          ")
+    print("        TIẾN TRÌNH CRAWL GIAO DIỆN WEBSITE          ")
     print("==================================================")
     
     if not url.startswith(("http://", "https://")):
@@ -220,7 +220,7 @@ def download_web_assets(url):
         print(f"[-] Không thể lưu tệp HTML chính: {e}")
 
     print("\n==================================================")
-    print(f"[THÀNH CÔNG] Hoàn tất tiến trình cào dữ liệu: {domain}")
+    print(f"[THÀNH CÔNG] Hoàn tất tiến trình crawl dữ liệu: {domain}")
     print(f"Thư mục dự án lưu trữ tại: {project_dir}")
     print("==================================================")
 
@@ -228,7 +228,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         target_url = sys.argv[1]
     else:
-        target_url = input("Nhập URL website cần cào giao diện: ").strip()
+        target_url = input("Nhập URL website cần crawl giao diện: ").strip()
         
     if target_url:
         download_web_assets(target_url)

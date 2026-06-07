@@ -1,6 +1,6 @@
-# Công cụ cào giao diện Website (Web Interface Scraper)
+# Công cụ crawl giao diện Website (Web Interface Scraper)
 
-Dự án này chứa một script Python chuyên nghiệp để cào toàn bộ tài nguyên giao diện của một website dựa trên URL đầu vào. Script tự động tải mã nguồn HTML chính, các tệp Stylesheet (CSS), tệp JavaScript (JS), và các tệp hình ảnh (.png, .jpg, .jpeg, .webp), đồng thời cập nhật lại đường dẫn để hiển thị offline dễ dàng.
+Dự án này chứa một script Python chuyên nghiệp để crawl toàn bộ tài nguyên giao diện của một website dựa trên URL đầu vào. Script tự động tải mã nguồn HTML chính, các tệp Stylesheet (CSS), tệp JavaScript (JS), và các tệp hình ảnh (.png, .jpg, .jpeg, .webp), đồng thời cập nhật lại đường dẫn để hiển thị offline dễ dàng.
 
 ## 📋 Yêu cầu hệ thống và cài đặt thư viện
 
