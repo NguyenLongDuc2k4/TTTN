@@ -1,0 +1,15 @@
+# Môi trường ảo Python
+venv/
+.venv/
+env/
+
+# Thư mục dữ liệu tải về
+**/Data/
+
+# Cache của Python
+__pycache__/
+*.pyc
+.DS_Store
+
+# Cấu hình VS Code
+.vscode/
