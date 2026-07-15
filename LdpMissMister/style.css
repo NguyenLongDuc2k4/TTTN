@@ -1,0 +1,727 @@
+/* ==========================================================================
+   CSS SYSTEM - HÀO KHÍ DU HIỆP: MISS & MISTER 2026 LANDING PAGE
+   ========================================================================== */
+
+/* 1. CSS VARIABLES & CORE DESIGN TOKENS */
+:root {
+    --bg-dark: #070302;
+    --bg-dark-rgba: rgba(7, 3, 2, 0.9);
+    --gold-accent: #C59B27;
+    --gold-light: #FFD700;
+    --gold-glow: 0 0 15px rgba(197, 155, 39, 0.6);
+    --transition-smooth: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    
+    /* Theme Miss: Neon Pink/Magenta */
+    --pink-color: #E22B8C;
+    --pink-light: #FF69B4;
+    --pink-glow: 0 0 15px rgba(226, 43, 140, 0.7);
+    --pink-glow-heavy: 0 0 25px rgba(226, 43, 140, 0.9);
+
+    /* Theme Mister: Neon Blue/Cyan */
+    --blue-color: #00B2FE;
+    --blue-light: #00E5FF;
+    --blue-glow: 0 0 15px rgba(0, 178, 254, 0.7);
+    --blue-glow-heavy: 0 0 25px rgba(0, 178, 254, 0.9);
+}
+
+/* 2. BASE STYLING */
+body {
+    background-color: var(--bg-dark);
+    background-image: linear-gradient(180deg, rgba(7, 3, 2, 0.6) 0%, rgba(7, 3, 2, 0.9) 100%), url('images/BGTRANGVOTING.png');
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #F8F9FA;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--gold-accent);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-light);
+}
+
+/* Typography Utilities */
+.font-cinzel {
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+.text-highlight {
+    color: var(--gold-light);
+    font-family: 'Cinzel', serif;
+}
+.green-text {
+    color: #4AF2A1 !important;
+}
+.yellow-text {
+    color: #FFDE59 !important;
+}
+
+/* 3. NAVBAR STYLING */
+.main-navbar {
+    background-color: rgba(22, 11, 26, 0.9);
+    border-bottom: 2px solid var(--gold-accent);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+}
+.navbar-container {
+    max-width: 1200px;
+}
+.logo-icon {
+    height: 48px;
+    width: 48px;
+    border-radius: 10px;
+    border: 1px solid var(--gold-accent);
+    box-shadow: var(--gold-glow);
+}
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+.game-title {
+    color: #FFFFFF;
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+.game-subtitle {
+    color: var(--gold-light);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.nav-icon-link {
+    color: #F8F9FA;
+    font-size: 1.3rem;
+    transition: var(--transition-smooth);
+    padding: 6px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+}
+.nav-icon-link:hover {
+    color: var(--gold-light);
+    background: rgba(197, 155, 39, 0.2);
+    transform: scale(1.1);
+}
+.btn-login-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #4A1A7F 0%, #1A0D33 100%);
+    border: 1px solid var(--gold-accent);
+    padding: 6px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+.btn-login-header span {
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.btn-login-img {
+    height: 18px;
+    width: 18px;
+}
+.btn-login-header:hover {
+    transform: scale(1.03);
+    box-shadow: var(--gold-glow);
+    border-color: var(--gold-light);
+}
+
+/* 4. HERO SECTION STYLING */
+.hero-section {
+    padding: 100px 0 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(2px 2px at 20% 30%, rgba(255, 215, 0, 0.4), transparent),
+        radial-gradient(2px 2px at 40% 70%, rgba(226, 43, 140, 0.3), transparent),
+        radial-gradient(2px 2px at 60% 20%, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 80% 60%, rgba(0, 178, 254, 0.3), transparent),
+        radial-gradient(3px 3px at 10% 80%, rgba(255, 215, 0, 0.2), transparent),
+        radial-gradient(2px 2px at 90% 40%, rgba(226, 43, 140, 0.2), transparent);
+    animation: sparkle 8s infinite alternate;
+    z-index: 1;
+    pointer-events: none;
+}
+@keyframes sparkle {
+    0% { opacity: 0.6; transform: translateY(0); }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; transform: translateY(-15px); }
+}
+.hero-container {
+    z-index: 2;
+    position: relative;
+}
+.main-logo {
+    max-height: 150px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.9));
+}
+.miss-mister-title-container {
+    margin-top: -20px;
+}
+.miss-mister-title {
+    font-family: 'Cinzel', serif;
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(180deg, #FFFFFF 30%, #FFD700 70%, #E22B8C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 25px rgba(226, 43, 140, 0.5));
+    letter-spacing: 4px;
+}
+.theme-mister .miss-mister-title {
+    background: linear-gradient(180deg, #FFFFFF 30%, #FFD700 70%, #00B2FE 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 25px rgba(0, 178, 254, 0.5));
+}
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: #FFFFFF;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.animate-pulse {
+    animation: pulse 3s infinite alternate;
+}
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.95; }
+    100% { transform: scale(1.02); opacity: 1; }
+}
+
+/* Shield Button "THAM GIA NGAY" */
+.join-btn-wrapper {
+    position: relative;
+    display: inline-block;
+}
+.btn-join-now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: linear-gradient(135deg, #FF69B4 0%, #B0005C 100%);
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    filter: drop-shadow(0 0 12px rgba(226, 43, 140, 0.7));
+    margin: 0 auto;
+    position: relative;
+}
+.theme-mister .btn-join-now {
+    background: linear-gradient(135deg, #00E5FF 0%, #004D80 100%);
+    filter: drop-shadow(0 0 12px rgba(0, 178, 254, 0.7));
+}
+.btn-join-now:hover {
+    transform: scale(1.1) rotate(5deg);
+    color: #FFFFFF;
+    filter: drop-shadow(0 0 25px rgba(255,255,255,0.6));
+}
+.join-text-eng {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: rgba(255,255,255,0.7);
+}
+.join-text-vn {
+    font-family: 'Cinzel', serif;
+    font-size: 1.05rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.2;
+    margin-top: 4px;
+}
+
+/* Quick Nav Buttons */
+.btn-quick-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(20, 10, 30, 0.85);
+    border: 1px solid var(--gold-accent);
+    padding: 12px 10px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: var(--transition-smooth);
+    height: 100%;
+}
+.btn-quick-nav:hover {
+    background: rgba(197, 155, 39, 0.15);
+    border-color: var(--gold-light);
+    transform: translateY(-4px);
+    box-shadow: var(--gold-glow);
+}
+.btn-link-nav {
+    text-decoration: none;
+}
+.nav-icon {
+    height: 35px;
+    width: auto;
+    margin-bottom: 8px;
+    filter: drop-shadow(0 0 5px var(--gold-light));
+}
+
+/* 5. REGISTER SECTION STYLING */
+.register-section {
+    position: relative;
+    z-index: 3;
+}
+.section-title-wrapper {
+    position: relative;
+}
+.section-title-img {
+    max-height: 80px;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.8));
+}
+
+/* Main Form Card */
+.register-card {
+    background: rgba(15, 7, 20, 0.92);
+    border: 2px solid var(--pink-color) !important;
+    border-radius: 18px;
+    box-shadow: var(--pink-glow);
+    transition: var(--transition-smooth);
+}
+/* Mister Theme Card State */
+.theme-mister .register-card {
+    border-color: var(--blue-color) !important;
+    box-shadow: var(--blue-glow);
+}
+.register-card:hover {
+    box-shadow: var(--pink-glow-heavy);
+}
+.theme-mister .register-card:hover {
+    box-shadow: var(--blue-glow-heavy);
+}
+
+/* 6. UPLOAD BOXES STYLING */
+.main-upload-box {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-width: 480px;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+.main-upload-box:hover {
+    border-color: var(--pink-light);
+    background: rgba(226, 43, 140, 0.05);
+}
+.theme-mister .main-upload-box:hover {
+    border-color: var(--blue-light);
+    background: rgba(0, 178, 254, 0.05);
+}
+.upload-label {
+    cursor: pointer;
+    padding: 20px;
+}
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+.main-upload-box:hover .icon-circle {
+    transform: scale(1.1);
+    background: var(--pink-color);
+}
+.theme-mister .main-upload-box:hover .icon-circle {
+    background: var(--blue-color);
+}
+.main-upload-title {
+    color: #FFFFFF;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+.upload-desc {
+    font-size: 0.75rem;
+}
+.warning-text {
+    font-size: 0.8rem;
+    color: #FFA500;
+    font-style: italic;
+}
+
+/* Sub uploads */
+.sub-upload-box {
+    aspect-ratio: 1 / 1;
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    transition: var(--transition-smooth);
+    cursor: pointer;
+}
+.sub-upload-box:hover {
+    border-color: var(--pink-light);
+    background: rgba(226, 43, 140, 0.04);
+}
+.theme-mister .sub-upload-box:hover {
+    border-color: var(--blue-light);
+    background: rgba(0, 178, 254, 0.04);
+}
+
+/* Preview Image display states */
+.preview-container {
+    transition: var(--transition-smooth);
+}
+.preview-container img {
+    border-radius: 8px;
+}
+.btn-change-image {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+}
+
+/* 7. FORM ELEMENTS & CHARACTER INFO */
+.char-info-box {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 0.9rem;
+}
+.border-bottom-dashed {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+/* Gender Toggle Buttons */
+.btn-gender {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    transition: var(--transition-smooth);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-gender:hover {
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+.gender-icon {
+    height: 22px;
+    width: auto;
+}
+/* Miss active checked status */
+#gender-miss:checked + .btn-gender-miss {
+    border-color: var(--pink-color);
+    background: rgba(226, 43, 140, 0.15);
+    color: #FFFFFF;
+    box-shadow: var(--pink-glow);
+}
+/* Mister active checked status */
+#gender-mister:checked + .btn-gender-mister {
+    border-color: var(--blue-color);
+    background: rgba(0, 178, 254, 0.15);
+    color: #FFFFFF;
+    box-shadow: var(--blue-glow);
+}
+
+/* Inputs and Forms Styling */
+.game-input {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    border-radius: 8px;
+    padding: 12px 16px;
+    transition: var(--transition-smooth);
+}
+.game-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+.game-input:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    box-shadow: none;
+}
+/* Dynamic focus lighting */
+.theme-miss .game-input:focus {
+    border-color: var(--pink-light);
+    box-shadow: var(--pink-glow);
+}
+.theme-mister .game-input:focus {
+    border-color: var(--blue-light);
+    box-shadow: var(--blue-glow);
+}
+/* Select input arrow fix */
+select.game-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+/* ID Upload Cards */
+.btn-upload-id {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.6);
+    transition: var(--transition-smooth);
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn-upload-id:hover {
+    background: rgba(255, 255, 255, 0.07);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+/* ID Uploaded Success Status */
+.btn-upload-success {
+    background: rgba(40, 167, 69, 0.15) !important;
+    border-color: #28a745 !important;
+    color: #28a745 !important;
+}
+.upload-note {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    display: block;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+/* Submit & Cancel Buttons */
+.btn-action-submit, .btn-action-cancel {
+    position: relative;
+    background: transparent;
+    padding: 0;
+    overflow: hidden;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    transition: var(--transition-smooth);
+}
+.btn-action-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.btn-action-submit span, .btn-action-cancel span {
+    position: relative;
+    z-index: 2;
+    color: #FFFFFF;
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.btn-action-submit:hover, .btn-action-cancel:hover {
+    transform: scale(1.05);
+}
+.btn-action-submit:hover {
+    box-shadow: 0 0 20px rgba(40, 167, 69, 0.6);
+}
+.btn-action-cancel:hover {
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.6);
+}
+
+/* 8. FOOTER STYLING */
+.footer {
+    background: #050204;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.footer-game-icon {
+    height: 60px;
+    width: auto;
+    border-radius: 12px;
+    border: 1px solid var(--gold-accent);
+}
+.footer-game-title {
+    color: #FFFFFF;
+    letter-spacing: 2px;
+}
+.footer-desc, .footer-copyright {
+    font-size: 0.8rem;
+}
+
+/* 9. MODALS DESIGN STYLING */
+.game-modal .modal-content {
+    background-color: rgba(20, 10, 25, 0.96);
+    border: 2px solid var(--gold-accent) !important;
+    box-shadow: var(--gold-glow);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+.game-modal .modal-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.game-modal .modal-title {
+    color: var(--gold-light);
+    text-shadow: 0 0 10px rgba(255, 222, 89, 0.4);
+}
+.section-rule-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+.rules-content-body ul, .rules-content-body ol {
+    padding-left: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+.rules-content-body li {
+    margin-bottom: 8px;
+}
+.reward-box {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    padding: 12px 15px;
+    height: 100%;
+}
+.border-pink {
+    border: 1px solid var(--pink-color);
+}
+.border-blue {
+    border: 1px solid var(--blue-color);
+}
+.reward-title {
+    font-weight: 900;
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+.border-pink .reward-title {
+    color: var(--pink-light);
+}
+.border-blue .reward-title {
+    color: var(--blue-light);
+}
+.btn-close-modal {
+    background: var(--gold-accent);
+    color: #000000;
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 8px 30px;
+    border: none;
+    transition: var(--transition-smooth);
+}
+.btn-close-modal:hover {
+    background: var(--gold-light);
+    box-shadow: var(--gold-glow);
+    transform: scale(1.05);
+}
+
+/* Success Modal specific adjustments */
+.success-modal .modal-content {
+    border-color: #28a745 !important;
+    box-shadow: 0 0 25px rgba(40, 167, 69, 0.5);
+}
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* 10. RESPONSIVE OPTIMIZATIONS (MOBILE-FIRST) */
+@media (max-width: 576px) {
+    .miss-mister-title {
+        font-size: 2.3rem;
+    }
+    .hero-subtitle {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        padding: 4px 12px;
+    }
+    .btn-join-now {
+        width: 110px;
+        height: 110px;
+    }
+    .join-text-vn {
+        font-size: 0.85rem;
+    }
+    .join-text-eng {
+        font-size: 0.6rem;
+    }
+    .quick-nav-menu {
+        width: 100% !important;
+    }
+    .btn-quick-nav {
+        font-size: 0.75rem;
+        padding: 8px 4px;
+    }
+    .nav-icon {
+        height: 25px;
+    }
+    .main-upload-box {
+        max-width: 100%;
+    }
+    .register-card .card-body {
+        padding: 20px 15px !important;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .miss-mister-title {
+        font-size: 3.2rem;
+    }
+}

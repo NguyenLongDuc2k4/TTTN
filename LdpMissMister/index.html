@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hảo Khí Du Hiệp - Cuộc Thi Miss & Mister 2026</title>
+    <meta name="description" content="Trang đăng ký tham gia cuộc thi Miss & Mister của game Hảo Khí Du Hiệp. Hãy tham gia ngay để nhận những phần quà hấp dẫn!">
+    
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Google Fonts for Swordplay & Modern feels -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-miss"> <!-- Mặc định là Miss, sẽ chuyển class qua JS -->
+
+    <!-- 1. Header/Navbar -->
+    <nav class="navbar navbar-expand-lg py-2 main-navbar sticky-top">
+        <div class="container navbar-container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/iconapp.png" alt="Icon Game" class="logo-icon img-fluid me-2">
+                <div class="logo-text d-none d-sm-block">
+                    <span class="game-title">HẢO KHÍ DU HIỆP</span>
+                    <span class="game-subtitle">NHÀ PHÁT HÀNH NPH</span>
+                </div>
+            </a>
+            
+            <div class="ms-auto d-flex align-items-center gap-3">
+                <a href="#" class="nav-icon-link" title="Trang chủ">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+                <a href="#" class="nav-icon-link" title="Fanpage">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" class="btn-login-header">
+                    <img src="images/đn.png" alt="Đăng nhập" class="btn-login-img">
+                    <span>ĐĂNG NHẬP</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Banner Section -->
+    <header class="hero-section">
+        <div class="container text-center hero-container position-relative">
+            <!-- Game Logo Main -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6 col-10">
+                    <img src="images/Logo-HaoKhiDuHiep.png" alt="Hảo Khí Du Hiệp Logo" class="img-fluid main-logo">
+                </div>
+            </div>
+            
+            <!-- Miss & Mister Center Title -->
+            <div class="miss-mister-title-container my-3 animate-pulse">
+                <h1 class="miss-mister-title">MISS & MISTER</h1>
+                <p class="hero-subtitle">VISUAL CỰC PHẨM - KHÍ CHẤT CỰC ĐỈNH</p>
+            </div>
+
+            <!-- Big Shield Button "THAM GIA NGAY" -->
+            <div class="join-btn-wrapper my-4">
+                <a href="#register-section" class="btn-join-now">
+                    <span class="join-text-eng">JOIN NOW</span>
+                    <span class="join-text-vn">THAM GIA NGAY</span>
+                </a>
+            </div>
+
+            <!-- Quick Navigation Menu -->
+            <div class="quick-nav-menu row g-2 justify-content-center mx-auto mt-5">
+                <div class="col-6 col-sm-3 col-md-2">
+                    <button class="btn-quick-nav w-100" data-bs-toggle="modal" data-bs-target="#rulesModal">
+                        <img src="images/thele.png" alt="Icon" class="nav-icon">
+                        <span>THỂ LỆ</span>
+                    </button>
+                </div>
+                <div class="col-6 col-sm-3 col-md-2">
+                    <button class="btn-quick-nav w-100" data-bs-toggle="modal" data-bs-target="#guideModal">
+                        <img src="images/hd.png" alt="Icon" class="nav-icon">
+                        <span>HƯỚNG DẪN</span>
+                    </button>
+                </div>
+                <div class="col-6 col-sm-3 col-md-2">
+                    <a href="https://haokhiduhiep.vn/download" class="btn-quick-nav w-100 btn-link-nav">
+                        <img src="images/taigame.png" alt="Icon" class="nav-icon">
+                        <span>TẢI GAME</span>
+                    </a>
+                </div>
+                <div class="col-6 col-sm-3 col-md-2">
+                    <a href="https://nap.haokhiduhiep.vn" class="btn-quick-nav w-100 btn-link-nav">
+                        <img src="images/napthe.png" alt="Icon" class="nav-icon">
+                        <span>NẠP THẺ</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Đăng Ký Dự Thi Section -->
+    <section id="register-section" class="register-section py-5">
+        <div class="container">
+            <!-- Title Section -->
+            <div class="text-center mb-5 section-title-wrapper">
+                <img src="images/đkdt.png" alt="Đăng Ký Dự Thi" class="section-title-img img-fluid">
+            </div>
+
+            <!-- Main Form Card -->
+            <div class="card register-card border-0">
+                <div class="card-body p-4 p-md-5">
+                    <div class="row g-5">
+                        
+                        <!-- Cột Trái: Upload ảnh dự thi -->
+                        <div class="col-lg-6 d-flex flex-column align-items-center">
+                            <!-- Khung ảnh lớn chính -->
+                            <div class="main-upload-box position-relative mb-4 text-center">
+                                <input type="file" id="main-image-upload" class="d-none" accept="image/*">
+                                <label for="main-image-upload" class="w-100 h-100 d-flex flex-column align-items-center justify-content-center upload-label">
+                                    <div class="preview-container w-100 h-100 position-absolute top-0 start-0 d-none">
+                                        <img id="main-preview" src="images/anhto.png" alt="Ảnh chính dự thi" class="img-fluid w-100 h-100 object-fit-cover">
+                                        <span class="btn-change-image"><i class="fa-solid fa-pen"></i> Thay đổi</span>
+                                    </div>
+                                    <div class="upload-placeholder d-flex flex-column align-items-center justify-content-center">
+                                        <div class="icon-circle mb-3">
+                                            <i class="fa-solid fa-images fs-2 text-white"></i>
+                                        </div>
+                                        <span class="main-upload-title text-uppercase font-cinzel">THÊM ẢNH DỰ THI CHÍNH</span>
+                                        <span class="upload-desc text-muted mt-1">Kích thước đề xuất 1920x1080</span>
+                                    </div>
+                                </label>
+                            </div>
+
+                            <!-- Khung ảnh nhỏ phụ (3 ảnh) -->
+                            <div class="row g-2 w-100 justify-content-center sub-upload-row">
+                                <div class="col-4">
+                                    <div class="sub-upload-box text-center position-relative">
+                                        <input type="file" id="sub-image-1" class="d-none" accept="image/*">
+                                        <label for="sub-image-1" class="w-100 h-100 d-flex align-items-center justify-content-center upload-label">
+                                            <div class="preview-container w-100 h-100 position-absolute top-0 start-0 d-none">
+                                                <img id="sub-preview-1" src="images/anhnho1.png" alt="Ảnh phụ 1" class="img-fluid w-100 h-100 object-fit-cover">
+                                            </div>
+                                            <div class="upload-placeholder">
+                                                <i class="fa-solid fa-plus fs-4 text-white"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="sub-upload-box text-center position-relative">
+                                        <input type="file" id="sub-image-2" class="d-none" accept="image/*">
+                                        <label for="sub-image-2" class="w-100 h-100 d-flex align-items-center justify-content-center upload-label">
+                                            <div class="preview-container w-100 h-100 position-absolute top-0 start-0 d-none">
+                                                <img id="sub-preview-2" src="images/anhnho2.png" alt="Ảnh phụ 2" class="img-fluid w-100 h-100 object-fit-cover">
+                                            </div>
+                                            <div class="upload-placeholder">
+                                                <i class="fa-solid fa-plus fs-4 text-white"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="sub-upload-box text-center position-relative">
+                                        <input type="file" id="sub-image-3" class="d-none" accept="image/*">
+                                        <label for="sub-image-3" class="w-100 h-100 d-flex align-items-center justify-content-center upload-label">
+                                            <div class="preview-container w-100 h-100 position-absolute top-0 start-0 d-none">
+                                                <img id="sub-preview-3" src="images/anhnho3.png" alt="Ảnh phụ 3" class="img-fluid w-100 h-100 object-fit-cover">
+                                            </div>
+                                            <div class="upload-placeholder">
+                                                <i class="fa-solid fa-plus fs-4 text-white"></i>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="warning-text mt-3 text-center">*Bắt buộc phải đăng ký đủ 4 ảnh dự thi</span>
+                        </div>
+
+                        <!-- Cột Phải: Thông tin form -->
+                        <div class="col-lg-6">
+                            <!-- Thông tin nhân vật lấy tự động (Giả lập) -->
+                            <div class="char-info-box mb-4">
+                                <div class="row py-2 border-bottom-dashed">
+                                    <div class="col-4 text-muted">Nhân vật:</div>
+                                    <div class="col-8 text-highlight font-weight-bold">Lục Trà Bạc Hà</div>
+                                </div>
+                                <div class="row py-2 border-bottom-dashed">
+                                    <div class="col-4 text-muted">Bang hội:</div>
+                                    <div class="col-8 text-highlight green-text font-weight-bold">Lạc Viên</div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-4 text-muted">Máy chủ:</div>
+                                    <div class="col-8 text-highlight yellow-text font-weight-bold">S1 - Lý Bạch</div>
+                                </div>
+                            </div>
+
+                            <!-- Lựa chọn giới tính (Thi Miss / Mister) -->
+                            <div class="row mb-4 gender-selection-wrapper">
+                                <div class="col-6">
+                                    <input type="radio" name="gender" id="gender-miss" class="btn-check" checked>
+                                    <label class="btn btn-gender btn-gender-miss w-100 py-3" for="gender-miss">
+                                        <img src="images/thimiss.png" alt="Icon Miss" class="gender-icon me-2">
+                                        <span>THI MISS</span>
+                                    </label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="radio" name="gender" id="gender-mister" class="btn-check">
+                                    <label class="btn btn-gender btn-gender-mister w-100 py-3" for="gender-mister">
+                                        <img src="images/thimisster.png" alt="Icon Mister" class="gender-icon me-2">
+                                        <span>THI MISTER</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Form nhập liệu chính -->
+                            <form id="submission-form" class="mt-4">
+                                <!-- Địa chỉ liên hệ -->
+                                <div class="mb-3">
+                                    <input type="text" class="form-control game-input" id="address" placeholder="Nhập địa chỉ liên hệ nhận thưởng" required>
+                                </div>
+
+                                <!-- Số điện thoại và Khu vực -->
+                                <div class="row mb-3 g-2">
+                                    <div class="col-md-6">
+                                        <input type="tel" class="form-control game-input" id="phone" placeholder="Nhập số điện thoại" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select class="form-select game-input" id="region" required>
+                                            <option value="" disabled selected>Chọn khu vực</option>
+                                            <option value="mien-bac">Miền Bắc</option>
+                                            <option value="mien-trung">Miền Trung</option>
+                                            <option value="mien-nam">Miền Nam</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <!-- Upload CMND/CCCD -->
+                                <div class="mb-4">
+                                    <label class="form-label text-light mb-2">Nhập ảnh CMND/CCCD mặt trước và sau</label>
+                                    <div class="row g-2">
+                                        <div class="col-6">
+                                            <input type="file" id="id-front-upload" class="d-none" accept="image/*">
+                                            <label for="id-front-upload" class="btn btn-upload-id w-100 d-flex align-items-center justify-content-center py-2">
+                                                <i class="fa-solid fa-id-card me-2"></i>
+                                                <span id="front-text">Mặt trước</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-6">
+                                            <input type="file" id="id-back-upload" class="d-none" accept="image/*">
+                                            <label for="id-back-upload" class="btn btn-upload-id w-100 d-flex align-items-center justify-content-center py-2">
+                                                <i class="fa-solid fa-id-card me-2"></i>
+                                                <span id="back-text">Mặt sau</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <span class="upload-note">*Ảnh CMND/CCCD chỉ dùng để đối chiếu khi trao giải ngoài đời thực</span>
+                                </div>
+
+                                <!-- Giới thiệu bản thân -->
+                                <div class="mb-3">
+                                    <textarea class="form-control game-input" id="intro" rows="3" maxlength="300" placeholder="Nhập nội dung giới thiệu (không quá 300 kí tự)" required></textarea>
+                                </div>
+
+                                <!-- Video dự thi -->
+                                <div class="mb-4">
+                                    <input type="url" class="form-control game-input" id="video-link" placeholder="Nhập link video dự thi (Youtube/TikTok)">
+                                </div>
+
+                                <!-- Nút Hành Động -->
+                                <div class="row g-3 justify-content-center mt-3 btn-action-row">
+                                    <div class="col-6 col-sm-5">
+                                        <button type="submit" class="btn btn-action-submit w-100 border-0">
+                                            <img src="images/buttondongy.png" alt="Đồng Ý" class="btn-action-bg">
+                                            <span>ĐỒNG Ý</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-6 col-sm-5">
+                                        <button type="reset" class="btn btn-action-cancel w-100 border-0">
+                                            <img src="images/buttonhuybo.png" alt="Hủy Bỏ" class="btn-action-bg">
+                                            <span>HỦY BỎ</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Footer Section -->
+    <footer class="footer py-4 mt-5 text-center">
+        <div class="container">
+            <div class="logo-footer mb-3">
+                <img src="images/iconapp.png" alt="Icon Game" class="footer-game-icon img-fluid">
+            </div>
+            <h4 class="font-cinzel text-uppercase footer-game-title">Hảo Khí Du Hiệp</h4>
+            <p class="footer-desc text-muted mb-2">Trò chơi nhập vai kiếm hiệp thế hệ mới.</p>
+            <p class="footer-copyright text-muted mb-0">© 2026 Hảo Khí Du Hiệp - Phát hành bởi Nhà Phát Hành NPH. Bản quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap Modals -->
+    
+    <!-- Modal 1: Thể Lệ -->
+    <div class="modal fade game-modal" id="rulesModal" tabindex="-1" aria-labelledby="rulesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+            <div class="modal-content text-light border-0">
+                <div class="modal-header border-0 pb-0 justify-content-center position-relative">
+                    <h3 class="modal-title font-cinzel text-uppercase py-2" id="rulesModalLabel">THỂ LỆ CUỘC THI</h3>
+                    <button type="button" class="btn-close btn-close-white position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body custom-scrollbar pe-3">
+                    <div class="rules-content-body font-inter text-start">
+                        <h5 class="section-rule-title text-warning"><i class="fa-solid fa-calendar-days me-2"></i> 1. Thời gian diễn ra</h5>
+                        <ul>
+                            <li><strong>Giai đoạn đăng ký & bình chọn vòng sơ khảo:</strong> 15/07/2026 - 15/08/2026.</li>
+                            <li><strong>Vòng chung kết xếp hạng:</strong> 18/08/2026 - 30/08/2026.</li>
+                        </ul>
+
+                        <h5 class="section-rule-title text-warning mt-4"><i class="fa-solid fa-user-check me-2"></i> 2. Đối tượng tham gia</h5>
+                        <ul>
+                            <li>Tất cả người chơi sở hữu nhân vật đạt cấp độ 50 trở lên tại tất cả các máy chủ của Hảo Khí Du Hiệp.</li>
+                            <li>Đăng ký đúng giới tính ứng tuyển (Miss dành cho nữ giới, Mister dành cho nam giới).</li>
+                        </ul>
+
+                        <h5 class="section-rule-title text-warning mt-4"><i class="fa-solid fa-camera-retro me-2"></i> 3. Quy cách nộp ảnh & video</h5>
+                        <ul>
+                            <li><strong>Ảnh dự thi bắt buộc gồm 4 ảnh:</strong>
+                                <ul>
+                                    <li>1 ảnh chân dung chính (rõ mặt, không sử dụng bộ lọc quá đà).</li>
+                                    <li>3 ảnh phụ bao gồm: 1 ảnh chụp đời thường, 1 ảnh chụp màn hình thông tin nhân vật ingame, 1 ảnh chụp cùng một dòng chữ viết tay "Hảo Khí Du Hiệp 2026".</li>
+                                </ul>
+                            </li>
+                            <li><strong>Video dự thi (Không bắt buộc):</strong> Link video giới thiệu bản thân đăng tải trên TikTok hoặc Youtube (được cộng thêm điểm ưu tiên).</li>
+                            <li><strong>Ảnh CCCD/CMND:</strong> Yêu cầu tải lên mặt trước và mặt sau để phục vụ đối chiếu thông tin chính chủ khi trao các giải thưởng ngoài đời thực. Thông tin này sẽ được cam kết bảo mật tuyệt đối.</li>
+                        </ul>
+
+                        <h5 class="section-rule-title text-warning mt-4"><i class="fa-solid fa-award me-2"></i> 4. Giải thưởng cực đỉnh</h5>
+                        <div class="row g-2 mt-2">
+                            <div class="col-md-6">
+                                <div class="reward-box border-pink">
+                                    <div class="reward-title font-cinzel"><i class="fa-solid fa-crown me-2"></i> TOP 1 MISS</div>
+                                    <p class="mb-0 text-muted">Danh hiệu độc quyền, Thần thú giới hạn, 50.000 KNB & Cúp Miss lưu niệm đặc quyền.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="reward-box border-blue">
+                                    <div class="reward-title font-cinzel"><i class="fa-solid fa-crown me-2"></i> TOP 1 MISTER</div>
+                                    <p class="mb-0 text-muted">Danh hiệu độc quyền, Thần thú giới hạn, 50.000 KNB & Cúp Mister lưu niệm đặc quyền.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0 justify-content-center">
+                    <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">ĐÓNG</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Hướng Dẫn -->
+    <div class="modal fade game-modal" id="guideModal" tabindex="-1" aria-labelledby="guideModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content text-light border-0">
+                <div class="modal-header border-0 pb-0 justify-content-center position-relative">
+                    <h3 class="modal-title font-cinzel text-uppercase py-2" id="guideModalLabel">HƯỚNG DẪN DỰ THI</h3>
+                    <button type="button" class="btn-close btn-close-white position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body custom-scrollbar">
+                    <div class="rules-content-body font-inter text-start">
+                        <ol class="ps-3">
+                            <li class="mb-2"><strong>Bước 1:</strong> Đăng nhập tài khoản game của bạn ở góc trên bên phải trang web.</li>
+                            <li class="mb-2"><strong>Bước 2:</strong> Hệ thống tự động đồng bộ hóa thông tin nhân vật, bang hội, máy chủ của bạn.</li>
+                            <li class="mb-2"><strong>Bước 3:</strong> Chọn hạng mục tham gia tương ứng (<strong>Thi Miss</strong> hoặc <strong>Thi Mister</strong>).</li>
+                            <li class="mb-2"><strong>Bước 4:</strong> Điền đầy đủ thông tin vào Form, tải lên 1 ảnh chính và 3 ảnh phụ, kèm theo ảnh CMND/CCCD để xác minh.</li>
+                            <li class="mb-2"><strong>Bước 5:</strong> Nhấn "ĐỒNG Ý" để gửi bài thi. Hệ thống sẽ xét duyệt trong vòng 24h trước khi đăng tải lên danh sách bình chọn công khai.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0 justify-content-center">
+                    <button type="button" class="btn btn-close-modal" data-bs-dismiss="modal">ĐĂ HIỂU</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Đăng Ký Thành Công -->
+    <div class="modal fade game-modal success-modal" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content text-center text-light border-0 p-3">
+                <div class="modal-header border-0 justify-content-end p-0">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body py-4">
+                    <div class="success-icon-wrapper mb-3 animate-bounce">
+                        <i class="fa-solid fa-circle-check fs-1 text-success"></i>
+                    </div>
+                    <h4 class="font-cinzel text-success uppercase mb-2">ĐĂNG KÝ THÀNH CÔNG</h4>
+                    <p class="font-inter text-muted mb-0">Hồ sơ dự thi của bạn đã được tiếp nhận và đang trong quá trình duyệt. Chúc bạn may mắn!</p>
+                </div>
+                <div class="modal-footer border-0 justify-content-center p-0">
+                    <button type="button" class="btn btn-close-modal px-4" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS Bundle (CSS Modal/Popup triggers) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Custom Interaction Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const body = document.body;
+            const genderMiss = document.getElementById('gender-miss');
+            const genderMister = document.getElementById('gender-mister');
+            const form = document.getElementById('submission-form');
+
+            // 1. Chuyển đổi theme Miss / Mister
+            genderMiss.addEventListener('change', function() {
+                if (this.checked) {
+                    body.classList.remove('theme-mister');
+                    body.classList.add('theme-miss');
+                }
+            });
+
+            genderMister.addEventListener('change', function() {
+                if (this.checked) {
+                    body.classList.remove('theme-miss');
+                    body.classList.add('theme-mister');
+                }
+            });
+
+            // 2. Chức năng upload xem trước ảnh chính và ảnh phụ
+            setupImagePreview('main-image-upload', 'main-preview');
+            setupImagePreview('sub-image-1', 'sub-preview-1');
+            setupImagePreview('sub-image-2', 'sub-preview-2');
+            setupImagePreview('sub-image-3', 'sub-preview-3');
+
+            function setupImagePreview(inputId, previewId) {
+                const input = document.getElementById(inputId);
+                const preview = document.getElementById(previewId);
+                const previewContainer = preview.closest('.preview-container');
+                const uploadPlaceholder = previewContainer.nextElementSibling;
+
+                // Nếu ảnh mặc định đã tồn tại trong thư mục, hiển thị luôn xem trước
+                if (preview && preview.getAttribute('src')) {
+                    previewContainer.classList.remove('d-none');
+                    uploadPlaceholder.classList.add('d-none');
+                }
+
+                input.addEventListener('change', function() {
+                    const file = this.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            preview.src = e.target.result;
+                            previewContainer.classList.remove('d-none');
+                            uploadPlaceholder.classList.add('d-none');
+                        }
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+
+            // 3. Xử lý upload CMND/CCCD (Đổi màu & hiển thị tên file đã chọn)
+            setupIdUpload('id-front-upload', 'front-text');
+            setupIdUpload('id-back-upload', 'back-text');
+
+            function setupIdUpload(inputId, textId) {
+                const input = document.getElementById(inputId);
+                const text = document.getElementById(textId);
+                input.addEventListener('change', function() {
+                    if (this.files && this.files.length > 0) {
+                        text.textContent = "Đã chọn: " + this.files[0].name.substring(0, 10) + "...";
+                        text.closest('label').classList.add('btn-upload-success');
+                    } else {
+                        text.textContent = inputId === 'id-front-upload' ? 'Mặt trước' : 'Mặt sau';
+                        text.closest('label').classList.remove('btn-upload-success');
+                    }
+                });
+            }
+
+            // 4. Form Submit thành công
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Ngăn load lại trang
+                
+                // Mở modal thành công
+                const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+                
+                // Reset form sau khi submit thành công
+                form.reset();
+                document.getElementById('front-text').textContent = 'Mặt trước';
+                document.getElementById('back-text').textContent = 'Mặt sau';
+                document.querySelectorAll('.btn-upload-id').forEach(l => l.classList.remove('btn-upload-success'));
+            });
+        });
+    </script>
+</body>
+</html>
