@@ -1,0 +1,85 @@
+/* ==========================================
+   MyE Website - MyE Coin page Custom Stylesheet
+   ========================================== */
+
+/* Hero Banner style for Coin Page */
+.coin-hero-section {
+  height: 40vh;
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -30px;
+}
+
+/* Coin Logo Animation */
+.coin-m-logo {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Method Selector box in Coin Page */
+.coin-method-box {
+  background-color: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 15px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.coin-method-box:hover {
+  border-color: rgba(0, 240, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.promo-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--accent-cyan);
+  color: #000;
+  font-size: 9px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-bottom-left-radius: 6px;
+  text-transform: uppercase;
+}
+
+.method-img-sm {
+  height: 28px;
+  object-fit: contain;
+}
+
+.coin-method-box.active {
+  border-color: var(--accent-cyan);
+  background-color: rgba(0, 240, 255, 0.03);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.coin-method-box.active span {
+  color: var(--accent-cyan) !important;
+  font-weight: 700;
+}

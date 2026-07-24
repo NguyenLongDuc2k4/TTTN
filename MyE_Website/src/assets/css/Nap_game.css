@@ -1,0 +1,258 @@
+/* ==========================================
+   MyE Website - Nap Game page Custom Stylesheet
+   ========================================== */
+
+/* Hero Section of Topup page */
+.nap-hero-section {
+  height: 40vh;
+  min-height: 250px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -30px;
+}
+
+/* Custom layout helper */
+.avatar-sm {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+
+.avatar-lg {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.shadow-cyan {
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}
+
+/* Card Glow styling */
+.mye-card-glow {
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.mye-card-glow:hover {
+  border-color: rgba(0, 240, 255, 0.15);
+  box-shadow: 0 4px 25px rgba(0, 240, 255, 0.05);
+}
+
+.card-header-mye {
+  background-color: var(--bg-tertiary);
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-body-mye {
+  color: var(--text-main);
+}
+
+/* Table styling */
+.table-header-row {
+  background-color: var(--bg-tertiary) !important;
+  color: var(--text-main);
+}
+
+.table th, .table td {
+  border-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Selectable elements styles */
+.step-title {
+  font-weight: 700;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.step-num {
+  background-color: var(--accent-cyan);
+  color: #000;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+/* Select Game Cards */
+.select-box {
+  background-color: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-img-wrap {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.select-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.select-box:hover .select-img-wrap img {
+  transform: scale(1.08);
+}
+
+.select-box-label {
+  color: var(--text-muted);
+  font-weight: 600;
+  width: 100%;
+  display: block;
+}
+
+.select-box.active {
+  border-color: var(--accent-cyan);
+  background-color: rgba(0, 240, 255, 0.03);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.select-box.active .select-box-label {
+  color: var(--accent-cyan);
+}
+
+/* Payment Method Cards */
+.method-card {
+  background-color: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 20px 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--accent-gold);
+  color: #000;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 0;
+  text-transform: uppercase;
+}
+
+.method-logo {
+  height: 35px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.method-icon-wrap {
+  width: 35px;
+  height: 35px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.method-name {
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.method-card.active {
+  border-color: var(--accent-cyan);
+  background-color: rgba(0, 240, 255, 0.03);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+}
+
+.method-card.active .method-name {
+  color: var(--accent-cyan);
+}
+
+/* Package Cards */
+.package-card {
+  background-color: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 15px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.package-img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover .package-img {
+  transform: translateY(-3px);
+}
+
+.package-price {
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.package-card.active {
+  border-color: var(--accent-cyan);
+  background-color: rgba(0, 240, 255, 0.03);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.25);
+}
+
+.package-card.active .package-price {
+  color: var(--accent-cyan);
+}
+
+/* confirmation styling */
+#btn-confirm-topup {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#btn-confirm-topup:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
+}

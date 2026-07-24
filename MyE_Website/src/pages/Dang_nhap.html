@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyE - Đăng Nhập Tài Khoản</title>
+  <meta name="description" content="Đăng nhập tài khoản cổng game MyE để nạp game, mua coin và cập nhật thông tin cá nhân.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/Trang_chu.css">
+  <link rel="stylesheet" href="../assets/css/Dang_nhap.css">
+</head>
+<body class="login-body-bg">
+
+  <!-- 1. Navigation Header -->
+  <nav class="navbar navbar-expand-lg fixed-top mye-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="Trang_chu.html">
+        <img src="../assets/images/Trang_Chu/logo_Mye.png" alt="MyE Logo" class="mye-logo img-fluid">
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#myeNavbar" aria-controls="myeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fs-3"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="myeNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link" href="Trang_chu.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Tro_choi.html">Trò chơi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Nap_game.html">Nạp game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MyE_Coin.html">MyE Coin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hỗ trợ</a>
+          </li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <a href="Dang_nhap.html" class="btn-nav-login active">
+            <i class="fa-solid fa-user me-2"></i>Đăng Nhập
+          </a>
+          <a href="Dang_ky.html" class="glow-btn">
+            Đăng Ký
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Main Login Split Area -->
+  <main class="login-wrapper container d-flex align-items-center justify-content-center">
+    <div class="login-card-split row shadow-lg rounded border border-secondary overflow-hidden w-100 my-5">
+      
+      <!-- Left side: Visual Banner -->
+      <div class="col-lg-6 d-none d-lg-block login-banner-side p-0" style="background-image: linear-gradient(135deg, rgba(189, 0, 255, 0.85) 0%, rgba(10, 12, 20, 0.98) 100%), url('../assets/images/tai_khoan/bannerdautrang.png');">
+        <div class="h-100 d-flex flex-column justify-content-between p-5 text-white">
+          <div>
+            <img src="../assets/images/Trang_Chu/logo_Mye.png" alt="MyE Logo" class="h-8 mb-4">
+            <h1 class="fw-black tracking-wider text-uppercase">BƯỚC VÀO<br><span class="text-cyan">THẾ GIỚI GAME</span></h1>
+            <p class="text-muted">Cập nhật nhanh nhất tin tức sự kiện, nạp coin linh hoạt và bảo mật tài khoản tuyệt đối với hệ thống MyE Portal.</p>
+          </div>
+          
+          <div class="d-flex align-items-center gap-3 bg-dark bg-opacity-50 p-3 rounded border border-secondary">
+            <img src="../assets/images/MyE_Coin/girlMye.png" alt="Character" class="avatar-sm rounded-circle">
+            <div class="small">
+              <span class="d-block fw-bold text-cyan">Gamer VIP 2026</span>
+              <span class="text-muted text-nowrap">"Trải nghiệm cổng nạp cực nhanh và game siêu đỉnh!"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: Form Input fields -->
+      <div class="col-lg-6 login-form-side bg-secondary bg-opacity-75 p-4 p-md-5 d-flex flex-column justify-content-center">
+        <div class="mb-4 text-center text-lg-start">
+          <h2 class="fw-bold text-white mb-2 text-uppercase">Đăng Nhập</h2>
+          <p class="text-muted small">Chào mừng bạn quay trở lại cổng game MyE Portal.</p>
+        </div>
+
+        <form id="login-form">
+          <div class="mb-3">
+            <label for="username" class="form-label small fw-semibold text-muted">Tên tài khoản hoặc Email</label>
+            <input type="text" class="form-control form-control-mye" id="username" placeholder="Nhập tên đăng nhập hoặc email của bạn" required>
+          </div>
+          
+          <div class="mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
+              <label for="password" class="form-label small fw-semibold text-muted mb-0">Mật khẩu</label>
+              <a href="#" class="small text-cyan text-decoration-none">Quên mật khẩu?</a>
+            </div>
+            <div class="position-relative">
+              <input type="password" class="form-control form-control-mye pe-5" id="password" placeholder="Nhập mật khẩu tài khoản" required>
+              <button type="button" class="btn btn-password-toggle" id="toggle-password">
+                <i class="fa-solid fa-eye-slash text-muted"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="mb-4 form-check">
+            <input type="checkbox" class="form-check-input" id="remember-me">
+            <label class="form-check-label small text-muted" for="remember-me">Duy trì đăng nhập trên thiết bị này</label>
+          </div>
+
+          <button type="submit" class="glow-btn w-100 py-3 text-uppercase fw-bold tracking-wider mb-4">Đăng nhập tài khoản</button>
+        </form>
+
+        <div class="text-center mb-4">
+          <span class="small text-muted text-uppercase tracking-wider">Hoặc đăng nhập bằng</span>
+        </div>
+
+        <div class="d-flex gap-3 mb-4">
+          <button type="button" class="btn btn-outline-secondary text-white w-50 py-2 d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-brands fa-facebook fs-5 text-primary"></i> Facebook
+          </button>
+          <button type="button" class="btn btn-outline-secondary text-white w-50 py-2 d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-brands fa-google fs-5 text-danger"></i> Google
+          </button>
+        </div>
+
+        <div class="text-center">
+          <span class="small text-muted">Chưa có tài khoản? <a href="Dang_ky.html" class="text-cyan text-decoration-none fw-bold">Đăng ký ngay</a></span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 3. Footer Section -->
+  <footer class="mye-footer">
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p class="small mb-0">&copy; 2026 MyE Portal. Tất cả quyền được bảo lưu. Vận hành bởi NPH MyE.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6Rz8q32CmdggEjh35Imt9aJ7AHyLD69Npy4HI+N9tlLC533C5MTk45IPF895Dk9" crossorigin="anonymous"></script>
+  
+  <!-- Custom Javascript -->
+  <script src="../assets/js/Header_active.js"></script>
+  <script src="../assets/js/Dang_nhap.js"></script>
+</body>
+</html>

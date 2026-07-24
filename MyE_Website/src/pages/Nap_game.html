@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyE - Cổng Nạp Game & Lịch Sử Giao Dịch</title>
+  <meta name="description" content="Nạp game nhanh chóng, an toàn, hỗ trợ nhiều hình thức thanh toán tiện lợi và xem lịch sử giao dịch chi tiết.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/Trang_chu.css">
+  <link rel="stylesheet" href="../assets/css/Nap_game.css">
+</head>
+<body>
+
+  <!-- 1. Navigation Header -->
+  <nav class="navbar navbar-expand-lg fixed-top mye-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="Trang_chu.html">
+        <img src="../assets/images/Trang_Chu/logo_Mye.png" alt="MyE Logo" class="mye-logo img-fluid">
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#myeNavbar" aria-controls="myeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fs-3"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="myeNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link" href="Trang_chu.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Tro_choi.html">Trò chơi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Nap_game.html">Nạp game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MyE_Coin.html">MyE Coin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hỗ trợ</a>
+          </li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <!-- Đã đăng nhập -->
+          <div class="dropdown">
+            <a class="dropdown-toggle text-white d-flex align-items-center gap-2 text-decoration-none" href="#" role="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../assets/images/thong_tin_giao_dich/numye.png" alt="Avatar" class="avatar-sm rounded-circle">
+              <span class="d-none d-sm-inline">NguyenVanA</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user me-2"></i>Tài khoản của tôi</a></li>
+              <li><a class="dropdown-item" href="Nap_game.html"><i class="fa-solid fa-credit-card me-2"></i>Nạp thẻ</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#"><i class="fa-solid fa-right-from-bracket me-2"></i>Đăng xuất</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Hero Banner Section -->
+  <section class="nap-hero-section" style="background-image: linear-gradient(180deg, rgba(10, 12, 20, 0.6) 0%, rgba(10, 12, 20, 0.95) 100%), url('../assets/images/Nap_Game/Hero-banner.png');">
+    <div class="container text-center py-5">
+      <h1 class="fw-bold text-uppercase text-white tracking-widest mt-5">Cổng Nạp Tiền & Tiêu Điểm</h1>
+      <p class="text-cyan fw-semibold text-uppercase tracking-wider">Hệ thống nạp tự động - Nhận Coin ngay sau 30s</p>
+    </div>
+  </section>
+
+  <!-- 3. Main Content Grid (Account Info & Topup Box) -->
+  <main class="container my-5">
+    <div class="row g-4">
+      
+      <!-- LEFT COLUMN: THÔNG TIN TÀI KHOẢN & LỊCH SỬ GIAO DỊCH -->
+      <section class="col-lg-5">
+        <!-- Account Card Info -->
+        <div class="mye-card-glow mb-4">
+          <div class="card-header-mye">
+            <h4 class="fw-bold mb-0 text-uppercase"><i class="fa-solid fa-user-shield me-2 text-cyan"></i>Thông Tin Tài Khoản</h4>
+          </div>
+          <div class="card-body-mye p-4">
+            <div class="d-flex align-items-center gap-4 mb-4 pb-3 border-bottom border-secondary">
+              <img src="../assets/images/thong_tin_giao_dich/numye.png" alt="Avatar" class="avatar-lg rounded-circle border border-cyan shadow-cyan">
+              <div>
+                <h3 class="fw-bold text-white mb-1">NguyenVanA</h3>
+                <div class="d-flex align-items-center gap-2 mb-1">
+                  <img src="../assets/images/thong_tin_giao_dich/teenyicons_id-outline.png" alt="ID Icon" style="width: 14px; height: 14px;">
+                  <span class="text-muted small">ID: 987654321</span>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                  <img src="../assets/images/thong_tin_giao_dich/iconoir_coins.png" alt="Coin Icon" style="width: 16px; height: 16px;">
+                  <span class="text-gold fw-bold">5,000 MyE Coin</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row text-center">
+              <div class="col-6 border-end border-secondary">
+                <span class="text-muted d-block small">Tổng tiền đã nạp</span>
+                <span class="fw-bold text-white fs-5">1,250,000đ</span>
+              </div>
+              <div class="col-6">
+                <span class="text-muted d-block small">Cấp độ thành viên</span>
+                <span class="fw-bold text-cyan fs-5"><i class="fa-solid fa-gem me-1 text-cyan"></i>VIP 2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Transaction History Card -->
+        <div class="mye-card-glow">
+          <div class="card-header-mye d-flex justify-content-between align-items-center">
+            <h4 class="fw-bold mb-0 text-uppercase"><i class="fa-solid fa-clock-rotate-left me-2 text-purple"></i>Lịch Sử Giao Dịch</h4>
+            <a href="#" class="small text-cyan text-decoration-none">Tất cả</a>
+          </div>
+          <div class="card-body-mye p-0 table-responsive">
+            <table class="table table-dark table-striped table-hover mb-0 text-center text-nowrap align-middle">
+              <thead>
+                <tr class="table-header-row">
+                  <th class="small">Mã GD</th>
+                  <th class="small">Nội dung</th>
+                  <th class="small">Số tiền</th>
+                  <th class="small">Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="small fw-bold">#MYE2091</td>
+                  <td class="small">Nạp 100 MyE Coin</td>
+                  <td class="small text-white">100,000đ</td>
+                  <td><span class="badge bg-success bg-opacity-75 text-white">Thành công</span></td>
+                </tr>
+                <tr>
+                  <td class="small fw-bold">#MYE1982</td>
+                  <td class="small">Thiếu Niên Tam Quốc</td>
+                  <td class="small text-white">50,000đ</td>
+                  <td><span class="badge bg-success bg-opacity-75 text-white">Thành công</span></td>
+                </tr>
+                <tr>
+                  <td class="small fw-bold">#MYE1823</td>
+                  <td class="small">Nạp 500 MyE Coin</td>
+                  <td class="small text-white">500,000đ</td>
+                  <td><span class="badge bg-warning bg-opacity-75 text-dark">Đang xử lý</span></td>
+                </tr>
+                <tr>
+                  <td class="small fw-bold">#MYE1654</td>
+                  <td class="small">Mộng Kiếm Hiệp</td>
+                  <td class="small text-white">20,000đ</td>
+                  <td><span class="badge bg-success bg-opacity-75 text-white">Thành công</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- RIGHT COLUMN: FORM THỰC HIỆN NẠP TIỀN -->
+      <section class="col-lg-7">
+        <div class="mye-card-glow p-4">
+          <h2 class="fw-bold text-uppercase text-white border-bottom border-secondary pb-3 mb-4"><i class="fa-solid fa-wallet me-2 text-cyan"></i>Nạp Tiền Vào Game</h2>
+          
+          <!-- BƯỚC 1: CHỌN GAME CẦN NẠP -->
+          <div class="mb-4">
+            <h5 class="step-title mb-3"><span class="step-num">1</span> Chọn Game / Dịch Vụ</h5>
+            <div class="row g-2" id="game-select-group">
+              <!-- MyE Coin -->
+              <div class="col-4 col-md-3">
+                <div class="select-box active" data-value="myecoin">
+                  <div class="select-img-wrap">
+                    <img src="../assets/images/Nap_Game/DS-game_nap/MYECOIN.png" alt="MyE Coin">
+                  </div>
+                  <span class="select-box-label small text-truncate">MyE Coin</span>
+                </div>
+              </div>
+              <!-- Game 1 -->
+              <div class="col-4 col-md-3">
+                <div class="select-box" data-value="game1">
+                  <div class="select-img-wrap">
+                    <img src="../assets/images/Nap_Game/DS-game_nap/CARD(1).png" alt="Thiếu Niên Tam Quốc">
+                  </div>
+                  <span class="select-box-label small text-truncate">T.Niên Tam Quốc</span>
+                </div>
+              </div>
+              <!-- Game 2 -->
+              <div class="col-4 col-md-3">
+                <div class="select-box" data-value="game2">
+                  <div class="select-img-wrap">
+                    <img src="../assets/images/Nap_Game/DS-game_nap/CARD(2).png" alt="Mộng Kiếm Hiệp">
+                  </div>
+                  <span class="select-box-label small text-truncate">Mộng Kiếm Hiệp</span>
+                </div>
+              </div>
+              <!-- Game 3 -->
+              <div class="col-4 col-md-3">
+                <div class="select-box" data-value="game3">
+                  <div class="select-img-wrap">
+                    <img src="../assets/images/Nap_Game/DS-game_nap/CARD(3).png" alt="Hỏa Long Đấu Ký">
+                  </div>
+                  <span class="select-box-label small text-truncate">Hỏa Long Đấu Ký</span>
+                </div>
+              </div>
+              <!-- Game 4 -->
+              <div class="col-4 col-md-3">
+                <div class="select-box" data-value="game4">
+                  <div class="select-img-wrap">
+                    <img src="../assets/images/Nap_Game/DS-game_nap/CARD(4).png" alt="Vương Quốc Huyền Bí">
+                  </div>
+                  <span class="select-box-label small text-truncate">V.Quốc Huyền Bí</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BƯỚC 2: CHỌN PHƯƠNG THỨC THANH TOÁN -->
+          <div class="mb-4">
+            <h5 class="step-title mb-3"><span class="step-num">2</span> Chọn Phương Thức Thanh Toán</h5>
+            <div class="row g-3" id="method-select-group">
+              <!-- Momo -->
+              <div class="col-md-4">
+                <div class="method-card active" data-method="momo" data-promo="20">
+                  <div class="promo-badge">Khuyến mãi +20%</div>
+                  <img src="../assets/images/thong_tin_giao_dich/momo.png" alt="Ví Momo" class="method-logo">
+                  <div class="method-name">Ví MoMo</div>
+                </div>
+              </div>
+              <!-- Banking -->
+              <div class="col-md-4">
+                <div class="method-card" data-method="banking" data-promo="20">
+                  <div class="promo-badge">Khuyến mãi +20%</div>
+                  <div class="method-icon-wrap bg-primary text-white">
+                    <i class="fa-solid fa-building-columns fs-4"></i>
+                  </div>
+                  <div class="method-name">Chuyển khoản</div>
+                </div>
+              </div>
+              <!-- Card -->
+              <div class="col-md-4">
+                <div class="method-card" data-method="card" data-promo="0">
+                  <div class="method-icon-wrap bg-secondary text-white">
+                    <i class="fa-solid fa-mobile-screen-button fs-4"></i>
+                  </div>
+                  <div class="method-name">Thẻ Cào ĐT</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BƯỚC 3: CHỌN GÓI NẠP / MỆNH GIÁ -->
+          <div class="mb-4">
+            <h5 class="step-title mb-3"><span class="step-num">3</span> Chọn Gói Nạp</h5>
+            <div class="row g-3" id="package-select-group">
+              <!-- 20 Coin -->
+              <div class="col-6 col-md-3">
+                <div class="package-card active" data-coin="20" data-price="20000">
+                  <img src="../assets/images/thong_tin_giao_dich/Chon_goi_nap/20_MYE_COIN.png" alt="20 Coin" class="package-img">
+                  <div class="package-price">20,000 VNĐ</div>
+                </div>
+              </div>
+              <!-- 50 Coin -->
+              <div class="col-6 col-md-3">
+                <div class="package-card" data-coin="50" data-price="50000">
+                  <img src="../assets/images/thong_tin_giao_dich/Chon_goi_nap/50_MYE_COIN.png" alt="50 Coin" class="package-img">
+                  <div class="package-price">50,000 VNĐ</div>
+                </div>
+              </div>
+              <!-- 100 Coin -->
+              <div class="col-6 col-md-3">
+                <div class="package-card" data-coin="100" data-price="100000">
+                  <img src="../assets/images/thong_tin_giao_dich/Chon_goi_nap/100_MYE_COIN.png" alt="100 Coin" class="package-img">
+                  <div class="package-price">100,000 VNĐ</div>
+                </div>
+              </div>
+              <!-- 500 Coin -->
+              <div class="col-6 col-md-3">
+                <div class="package-card" data-coin="500" data-price="500000">
+                  <img src="../assets/images/thong_tin_giao_dich/Chon_goi_nap/500_MYE_COIN.png" alt="500 Coin" class="package-img">
+                  <div class="package-price">500,000 VNĐ</div>
+                </div>
+              </div>
+              <!-- 1000 Coin -->
+              <div class="col-6 col-md-3">
+                <div class="package-card" data-coin="1000" data-price="1000000">
+                  <img src="../assets/images/thong_tin_giao_dich/Chon_goi_nap/1000_MYE_COIN.png" alt="1000 Coin" class="package-img">
+                  <div class="package-price">1,000,000 VNĐ</div>
+                </div>
+              </div>
+              <!-- 2000 Coin -->
+              <div class="col-6 col-md-3">
+                <div class="package-card" data-coin="2000" data-price="2000000">
+                  <img src="../assets/images/thong_tin_giao_dich/Chon_goi_nap/2000_MYE_COIN.png" alt="2000 Coin" class="package-img">
+                  <div class="package-price">2,000,000 VNĐ</div>
+                </div>
+              </div>
+              <!-- 5000 Coin -->
+              <div class="col-6 col-md-3">
+                <div class="package-card" data-coin="5000" data-price="5000000">
+                  <img src="../assets/images/thong_tin_giao_dich/Chon_goi_nap/5000_MYE_COIN.png" alt="5000 Coin" class="package-img">
+                  <div class="package-price">5,000,000 VNĐ</div>
+                </div>
+              </div>
+              <!-- 10000 Coin -->
+              <div class="col-6 col-md-3">
+                <div class="package-card" data-coin="10000" data-price="10000000">
+                  <img src="../assets/images/thong_tin_giao_dich/Chon_goi_nap/10000_MYE_COIN.png" alt="10000 Coin" class="package-img">
+                  <div class="package-price">10,000,000 VNĐ</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BƯỚC 4: NHẬP THÔNG TIN TÀI KHOẢN NHẬN & TÍNH TIỀN -->
+          <div class="mb-4 p-3 bg-dark bg-opacity-50 rounded border border-secondary">
+            <h5 class="step-title mb-3"><span class="step-num">4</span> Xác Nhận Giao Dịch</h5>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="target-account" class="form-label small text-muted">Tên tài khoản nhận</label>
+                <input type="text" class="form-control form-control-mye" id="target-account" value="NguyenVanA">
+              </div>
+              <div class="col-md-6">
+                <label class="form-label small text-muted">Dịch vụ nhận</label>
+                <input type="text" class="form-control form-control-mye" id="display-game" value="MyE Coin" disabled>
+              </div>
+            </div>
+            
+            <div class="row mt-4 pt-3 border-top border-secondary text-white">
+              <div class="col-6">
+                <div class="small text-muted mb-1">Số tiền thanh toán:</div>
+                <div class="fw-bold fs-4 text-cyan" id="display-payment">20.000 VNĐ</div>
+              </div>
+              <div class="col-6 text-end">
+                <div class="small text-muted mb-1">Coin thực nhận:</div>
+                <div class="fw-bold fs-4 text-gold" id="display-total-coin">24 Coin <span class="small fs-6 text-success">(+20%)</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBMIT BUTTON -->
+          <button type="button" class="glow-btn w-100 py-3 text-uppercase tracking-wider" id="btn-confirm-topup">
+            <i class="fa-solid fa-credit-card me-2"></i> Xác nhận thanh toán
+          </button>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- 4. Footer Section -->
+  <footer class="mye-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <img src="../assets/images/Trang_Chu/logo_Mye.png" alt="MyE Logo" class="footer-logo">
+            <p class="footer-about small">MyE Portal là cổng game trực tuyến uy tín chuyên cung cấp các trò chơi MMO nhập vai, đấu tướng chiến thuật thế hệ mới độc quyền và chuyên nghiệp tại Việt Nam.</p>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Trò chơi</h5>
+            <ul class="footer-links small">
+              <li><a href="#">Hành Động Nhập Vai</a></li>
+              <li><a href="#">Đấu Tướng Chiến Thuật</a></li>
+              <li><a href="#">Casual & Giải Trí</a></li>
+              <li><a href="#">Game Mới Nhất</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Dịch vụ</h5>
+            <ul class="footer-links small">
+              <li><a href="Nap_game.html">Cổng Nạp MyE Coin</a></li>
+              <li><a href="#">Lịch Sử Giao Dịch</a></li>
+              <li><a href="#">Trung Tâm CSKH</a></li>
+              <li><a href="#">Điều Khoản Dịch Vụ</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-title">Liên hệ</h5>
+            <p class="small mb-2"><i class="fa-solid fa-location-dot text-cyan me-2"></i>Tầng 5, Tòa Nhà Công Nghệ, Quận 1, TP. HCM</p>
+            <p class="small mb-2"><i class="fa-solid fa-phone text-cyan me-2"></i>Hotline: 1900 6789 (8h00 - 22h00)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p class="small mb-0">&copy; 2026 MyE Portal. Tất cả quyền được bảo lưu. Phát hành và vận hành bởi NPH MyE.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6Rz8q32CmdggEjh35Imt9aJ7AHyLD69Npy4HI+N9tlLC533C5MTk45IPF895Dk9" crossorigin="anonymous"></script>
+  
+  <!-- Custom Javascript -->
+  <script src="../assets/js/Header_active.js"></script>
+  <script src="../assets/js/Nap_game.js"></script>
+</body>
+</html>

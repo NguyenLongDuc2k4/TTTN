@@ -1,0 +1,104 @@
+/* ==========================================
+   MyE Website - Dang Nhap (Login) Custom CSS
+   ========================================== */
+
+/* Login Body Styling */
+.login-body-bg {
+  background-color: var(--bg-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Wrapper alignment */
+.login-wrapper {
+  flex-grow: 1;
+  padding-top: calc(var(--nav-height) + 20px);
+}
+
+.login-card-split {
+  max-width: 960px;
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Left Banner Styling */
+.login-banner-side {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 500px;
+}
+
+.login-banner-side::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(10, 12, 20, 0.8) 0%, rgba(10, 12, 20, 0.98) 100%);
+  z-index: 1;
+}
+
+.login-banner-side > div {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+}
+
+/* Password Toggle Icon */
+.btn-password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: var(--text-muted);
+  z-index: 10;
+}
+
+.btn-password-toggle:hover {
+  color: var(--accent-cyan);
+}
+
+/* Outline social buttons */
+.btn-outline-secondary {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background-color: var(--bg-tertiary) !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-outline-secondary:hover {
+  border-color: var(--accent-cyan) !important;
+  background-color: rgba(0, 240, 255, 0.05) !important;
+}
+
+/* ---- Utility Classes for Login/Register ---- */
+
+/* Logo sizing inside banner */
+.h-8 {
+  height: 40px;
+  width: auto;
+}
+
+/* Text utilities */
+.tracking-wider {
+  letter-spacing: 2px;
+}
+
+.tracking-widest {
+  letter-spacing: 3px;
+}
+
+.fw-black {
+  font-weight: 900 !important;
+}
+
+/* Form side background fix */
+.login-form-side {
+  background-color: rgba(18, 22, 36, 0.95) !important;
+}

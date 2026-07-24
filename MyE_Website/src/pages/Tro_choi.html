@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyE - Kho Trò Chơi Trực Tuyến</title>
+  <meta name="description" content="Khám phá kho game phong phú của MyE với nhiều thể loại hấp dẫn: nhập vai RPG, chiến thuật SLG, hành động và casual.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="../assets/css/Trang_chu.css">
+  <link rel="stylesheet" href="../assets/css/Tro_choi.css">
+</head>
+<body>
+
+  <!-- 1. Navigation Header -->
+  <nav class="navbar navbar-expand-lg fixed-top mye-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="Trang_chu.html">
+        <img src="../assets/images/Trang_Chu/logo_Mye.png" alt="MyE Logo" class="mye-logo img-fluid">
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#myeNavbar" aria-controls="myeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fs-3"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="myeNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link" href="Trang_chu.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Tro_choi.html">Trò chơi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Nap_game.html">Nạp game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MyE_Coin.html">MyE Coin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hỗ trợ</a>
+          </li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <a href="Dang_nhap.html" class="btn-nav-login">
+            <i class="fa-solid fa-user me-2"></i>Đăng Nhập
+          </a>
+          <a href="Dang_ky.html" class="glow-btn">
+            Đăng Ký
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Search & Banner Section -->
+  <section class="games-hero-section">
+    <div class="container text-center pt-5">
+      <h1 class="fw-black text-uppercase text-white tracking-widest mt-5 mb-3">KHO TRÒ CHƠI DI ĐỘNG</h1>
+      <p class="text-cyan text-uppercase fw-semibold mb-4">Trải nghiệm những trận chiến rực lửa, kịch tính & đẳng cấp</p>
+      
+      <!-- Search Input Center -->
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-10">
+          <div class="search-bar-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/search-icon.svg" alt="Search" class="search-icon-img">
+            <input type="text" class="form-control form-control-search" id="game-search-input" placeholder="Tìm kiếm tên game của bạn...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Main Games Grid with Filter -->
+  <main class="container my-5">
+    <!-- Filter Tabs -->
+    <div class="d-flex justify-content-center mb-5 flex-wrap gap-2" id="games-filter-tabs">
+      <button class="filter-tab-btn active" data-genre="all">Tất Cả</button>
+      <button class="filter-tab-btn" data-genre="rpg">Nhập Vai RPG</button>
+      <button class="filter-tab-btn" data-genre="strategy">Chiến Thuật</button>
+      <button class="filter-tab-btn" data-genre="action">Hành Động</button>
+    </div>
+
+    <!-- Featured Game Spotlight (using featured-avatar.png) -->
+    <div class="row mb-5" id="featured-game-card">
+      <div class="col-12">
+        <div class="featured-game-banner d-flex flex-column flex-lg-row align-items-lg-center">
+          <div class="col-lg-7 featured-banner-img-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/featured-avatar.png" alt="Featured Game" class="img-fluid w-100">
+          </div>
+          <div class="col-lg-5 p-4 p-lg-5">
+            <span class="badge bg-danger mb-3 px-3 py-2 text-uppercase tracking-wider">GAME TIÊU ĐIỂM</span>
+            <h2 class="fw-black text-white mb-3">Hảo Khí Du Hiệp 3D</h2>
+            <p class="text-muted mb-4">Siêu phẩm võ hiệp nhập vai đồ họa Unreal Engine 5 đỉnh cao. Tham gia ngay để mở khóa thần binh và chiếm lĩnh bang hội chiến liên server.</p>
+            <div class="d-flex gap-3">
+              <a href="#" class="glow-btn">Tải Game Ngay</a>
+              <a href="Nap_game.html" class="btn btn-outline-cyan text-cyan border-cyan px-4">Nạp game</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Games Grid List -->
+    <div class="row g-4" id="games-grid-container">
+      
+      <!-- Game 1: Hảo Khí Du Hiệp (RPG) -->
+      <div class="col-md-6 col-lg-4 game-item-card" data-genre="rpg">
+        <div class="game-portal-card">
+          <div class="game-card-img-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/hao-khi-du-hiep.png" alt="Hảo Khí Du Hiệp">
+          </div>
+          <div class="game-portal-body">
+            <span class="game-genre-tag text-cyan">Nhập Vai RPG</span>
+            <h4 class="fw-bold text-white mb-2">Hảo Khí Du Hiệp</h4>
+            <p class="text-muted small mb-3 text-truncate-2">Võ lâm truyền kỳ thế hệ mới, đồ họa 3D đẹp mắt, lối chơi cày cuốc hấp dẫn.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-cyan glow-btn">Chơi ngay</a>
+              <span class="small text-muted"><i class="fa-regular fa-star text-gold me-1"></i>4.9/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 2: Hảo Khí Tam Quốc (Strategy) -->
+      <div class="col-md-6 col-lg-4 game-item-card" data-genre="strategy">
+        <div class="game-portal-card">
+          <div class="game-card-img-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/hao-khi-tam-quoc.png" alt="Hảo Khí Tam Quốc">
+          </div>
+          <div class="game-portal-body">
+            <span class="game-genre-tag text-purple">Chiến Thuật</span>
+            <h4 class="fw-bold text-white mb-2">Hảo Khí Tam Quốc</h4>
+            <p class="text-muted small mb-3 text-truncate-2">Tái hiện trận chiến Xích Bích huyền thoại dưới góc nhìn chiến thuật đỉnh cao của bạn.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-cyan glow-btn">Chơi ngay</a>
+              <span class="small text-muted"><i class="fa-regular fa-star text-gold me-1"></i>4.8/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 3: Hảo Khí Chiến Hồn (Action) -->
+      <div class="col-md-6 col-lg-4 game-item-card" data-genre="action">
+        <div class="game-portal-card">
+          <div class="game-card-img-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/hao-khi-chien-hon.png" alt="Hảo Khí Chiến Hồn">
+          </div>
+          <div class="game-portal-body">
+            <span class="game-genre-tag text-cyan">Hành Động</span>
+            <h4 class="fw-bold text-white mb-2">Hảo Khí Chiến Hồn</h4>
+            <p class="text-muted small mb-3 text-truncate-2">Đấu trường đối kháng sinh tử cuộn cảnh hoành tráng, combo võ thuật cực đỉnh.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-cyan glow-btn">Chơi ngay</a>
+              <span class="small text-muted"><i class="fa-regular fa-star text-gold me-1"></i>4.7/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 4: Boom Tank Battle (Action) -->
+      <div class="col-md-6 col-lg-4 game-item-card" data-genre="action">
+        <div class="game-portal-card">
+          <div class="game-card-img-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/boom-tank.png" alt="Boom Tank Battle">
+          </div>
+          <div class="game-portal-body">
+            <span class="game-genre-tag text-cyan">Hành Động</span>
+            <h4 class="fw-bold text-white mb-2">Boom Tank Battle</h4>
+            <p class="text-muted small mb-3 text-truncate-2">Trở thành dũng sĩ lái xe tăng tiêu diệt căn cứ địch, nâng cấp giáp và vũ khí tối tân.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-cyan glow-btn">Chơi ngay</a>
+              <span class="small text-muted"><i class="fa-regular fa-star text-gold me-1"></i>4.6/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 5: Kiếm Võ Lâm (RPG) -->
+      <div class="col-md-6 col-lg-4 game-item-card" data-genre="rpg">
+        <div class="game-portal-card">
+          <div class="game-card-img-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/featured-1.png" alt="Kiếm Võ Lâm">
+          </div>
+          <div class="game-portal-body">
+            <span class="game-genre-tag text-cyan">Nhập Vai RPG</span>
+            <h4 class="fw-bold text-white mb-2">Kiếm Võ Lâm</h4>
+            <p class="text-muted small mb-3 text-truncate-2">Thế giới kiếm hiệp hoàn mỹ mở rộng, bay lượn khinh công, kết đôi phu thê.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-cyan glow-btn">Chơi ngay</a>
+              <span class="small text-muted"><i class="fa-regular fa-star text-gold me-1"></i>4.9/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 6: Vương Quốc Thần Thoại (Strategy) -->
+      <div class="col-md-6 col-lg-4 game-item-card" data-genre="strategy">
+        <div class="game-portal-card">
+          <div class="game-card-img-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/featured-2.png" alt="Vương Quốc Thần Thoại">
+          </div>
+          <div class="game-portal-body">
+            <span class="game-genre-tag text-purple">Chiến Thuật</span>
+            <h4 class="fw-bold text-white mb-2">Vương Quốc Thần Thoại</h4>
+            <p class="text-muted small mb-3 text-truncate-2">Xây dựng vương quốc, thu thập tài nguyên và chỉ huy quân đội đi đánh chiếm thuộc địa.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-cyan glow-btn">Chơi ngay</a>
+              <span class="small text-muted"><i class="fa-regular fa-star text-gold me-1"></i>4.8/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 7: Đấu Trường Huyền Thoại (Action) -->
+      <div class="col-md-6 col-lg-4 game-item-card" data-genre="action">
+        <div class="game-portal-card">
+          <div class="game-card-img-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/featured-3.png" alt="Đấu Trường Huyền Thoại">
+          </div>
+          <div class="game-portal-body">
+            <span class="game-genre-tag text-cyan">Hành Động</span>
+            <h4 class="fw-bold text-white mb-2">Đấu Trường Huyền Thoại</h4>
+            <p class="text-muted small mb-3 text-truncate-2">Đại chiến MOBA 5v5 thời gian thực cực kịch tính với hơn 100 tướng kỹ năng phong phú.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-cyan glow-btn">Chơi ngay</a>
+              <span class="small text-muted"><i class="fa-regular fa-star text-gold me-1"></i>4.9/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game 8: Hỏa Long Mobile (RPG) -->
+      <div class="col-md-6 col-lg-4 game-item-card" data-genre="rpg">
+        <div class="game-portal-card">
+          <div class="game-card-img-wrap">
+            <img src="../assets/images/Tro_Choi/Game_Noi_Bat/featured-4.png" alt="Hỏa Long Mobile">
+          </div>
+          <div class="game-portal-body">
+            <span class="game-genre-tag text-cyan">Nhập Vai RPG</span>
+            <h4 class="fw-bold text-white mb-2">Hỏa Long Mobile</h4>
+            <p class="text-muted small mb-3 text-truncate-2">Cuộc chiến diệt rồng lửa phương tây đầy kịch tính, săn lùng rương báu huyền bí.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-sm btn-cyan glow-btn">Chơi ngay</a>
+              <span class="small text-muted"><i class="fa-regular fa-star text-gold me-1"></i>4.5/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- 4. Footer Section -->
+  <footer class="mye-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <img src="../assets/images/Trang_Chu/logo_Mye.png" alt="MyE Logo" class="footer-logo">
+            <p class="footer-about small">MyE Portal là cổng game trực tuyến uy tín chuyên cung cấp các trò chơi MMO nhập vai, đấu tướng chiến thuật thế hệ mới độc quyền và chuyên nghiệp tại Việt Nam.</p>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Trò chơi</h5>
+            <ul class="footer-links small">
+              <li><a href="#">Hành Động Nhập Vai</a></li>
+              <li><a href="#">Đấu Tướng Chiến Thuật</a></li>
+              <li><a href="#">Casual & Giải Trí</a></li>
+              <li><a href="#">Game Mới Nhất</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Dịch vụ</h5>
+            <ul class="footer-links small">
+              <li><a href="Nap_game.html">Cổng Nạp MyE Coin</a></li>
+              <li><a href="#">Lịch Sử Giao Dịch</a></li>
+              <li><a href="#">Trung Tâm CSKH</a></li>
+              <li><a href="#">Điều Khoản Dịch Vụ</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-title">Liên hệ</h5>
+            <p class="small mb-2"><i class="fa-solid fa-location-dot text-cyan me-2"></i>Tầng 5, Tòa Nhà Công Nghệ, Quận 1, TP. HCM</p>
+            <p class="small mb-2"><i class="fa-solid fa-phone text-cyan me-2"></i>Hotline: 1900 6789 (8h00 - 22h00)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p class="small mb-0">&copy; 2026 MyE Portal. Tất cả quyền được bảo lưu. Phát hành và vận hành bởi NPH MyE.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6Rz8q32CmdggEjh35Imt9aJ7AHyLD69Npy4HI+N9tlLC533C5MTk45IPF895Dk9" crossorigin="anonymous"></script>
+  
+  <!-- Custom Javascript -->
+  <script src="../assets/js/Header_active.js"></script>
+  <script src="../assets/js/Tro_choi.js"></script>
+</body>
+</html>

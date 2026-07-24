@@ -1,0 +1,673 @@
+/* ==========================================
+   MyE Website - Custom Stylesheet (Gaming Theme)
+   ========================================== */
+
+/* 1. Global Variables & Reset */
+:root {
+  --bg-primary: #0a0c14;
+  --bg-secondary: #121624;
+  --bg-tertiary: #181d30;
+  --accent-cyan: #00f0ff;
+  --accent-purple: #bd00ff;
+  --accent-gold: #ffc107;
+  --text-main: #f5f6fa;
+  --text-muted: #8b949e;
+  --font-family: 'Inter', sans-serif;
+  --font-title: 'Cinzel', serif;
+  --nav-height: 80px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
+
+/* 2. Common Components & Animations */
+.text-cyan { color: var(--accent-cyan) !important; }
+.text-purple { color: var(--accent-purple) !important; }
+.text-gold { color: var(--accent-gold) !important; }
+
+.glow-btn {
+  position: relative;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  z-index: 1;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.glow-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.glow-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+  color: #fff;
+}
+
+.glow-btn:hover::before {
+  opacity: 1;
+}
+
+.section-title-wrapper {
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title {
+  font-family: var(--font-family);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #fff, var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.section-title-line {
+  height: 3px;
+  width: 60px;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* 3. Header & Navigation */
+.mye-navbar {
+  height: var(--nav-height);
+  background: rgba(10, 12, 20, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+.mye-navbar.scrolled {
+  background: rgba(7, 9, 15, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  height: 70px;
+}
+
+.mye-logo {
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.mye-navbar.scrolled .mye-logo {
+  height: 40px;
+}
+
+.nav-link {
+  color: var(--text-main) !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 10px 15px !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-cyan);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--accent-cyan) !important;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: calc(100% - 30px);
+}
+
+.btn-nav-login {
+  background-color: transparent;
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan) !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 8px 20px !important;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-nav-login:hover {
+  background-color: var(--accent-cyan);
+  color: #000 !important;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+/* 4. Hero Slider Section */
+.hero-slider-section {
+  position: relative;
+  margin-top: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.hero-slide {
+  height: 80vh;
+  min-height: 500px;
+  max-height: 800px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-slide::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(10, 12, 20, 0.4) 0%, rgba(10, 12, 20, 0.95) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+}
+
+.hero-badge {
+  background: rgba(0, 240, 255, 0.1);
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  font-family: var(--font-family);
+}
+
+.hero-desc {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Mini thumbnail selector under slider */
+.slider-thumbs {
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+  z-index: 100;
+  display: flex;
+  gap: 15px;
+}
+
+.thumb-item {
+  width: 100px;
+  height: 60px;
+  border-radius: 4px;
+  border: 2px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.3s ease;
+}
+
+.thumb-item.active,
+.thumb-item:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 240, 255, 0.3);
+}
+
+.thumb-item.active::after,
+.thumb-item:hover::after {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* 5. Spotlight Section */
+.spotlight-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.spotlight-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-purple);
+  box-shadow: 0 10px 25px rgba(189, 0, 255, 0.2);
+}
+
+.spotlight-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.spotlight-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.spotlight-card:hover .spotlight-img-wrap img {
+  transform: scale(1.05);
+}
+
+.spotlight-body {
+  padding: 24px;
+}
+
+.spotlight-tag {
+  color: var(--accent-gold);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Game Info Hover Ribbon */
+.game-info-ribbon {
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 6px 16px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  border-radius: 4px;
+  z-index: 5;
+}
+
+/* 6. News Section */
+.news-section {
+  padding: 80px 0;
+  background-color: var(--bg-secondary);
+}
+
+.news-tab-nav {
+  display: flex;
+  gap: 15px;
+  border-bottom: 2px solid rgba(255,255,255,0.05);
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.news-tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.news-tab-btn.active,
+.news-tab-btn:hover {
+  color: var(--accent-cyan);
+}
+
+.news-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-cyan);
+}
+
+.news-card {
+  display: flex;
+  background: var(--bg-tertiary);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.03);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.news-card:hover {
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.news-card-img {
+  width: 200px;
+  min-width: 200px;
+  object-fit: cover;
+}
+
+.news-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.news-card-date {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.news-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-main);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.news-card:hover .news-card-title {
+  color: var(--accent-cyan);
+}
+
+/* 7. Games Grid Section */
+.games-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.game-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  height: 380px;
+}
+
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.game-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.game-card-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.game-card-genre {
+  font-size: 13px;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.btn-play-card {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 240, 255, 0.25);
+}
+
+.game-card:hover img {
+  transform: scale(1.08);
+}
+
+.game-card:hover .game-card-overlay {
+  opacity: 1;
+  background: linear-gradient(360deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0.1) 100%);
+}
+
+.game-card:hover .btn-play-card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 8. Footer Section */
+.mye-footer {
+  background-color: #07080f;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-top {
+  padding: 60px 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 0;
+}
+
+.footer-logo {
+  height: 45px;
+  margin-bottom: 25px;
+}
+
+.footer-about {
+  line-height: 1.7;
+}
+
+.footer-title {
+  color: var(--text-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent-cyan);
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--bg-tertiary);
+  color: var(--text-main);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background-color: var(--accent-cyan);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* 9. Modal Styling */
+.mye-modal .modal-content {
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-main);
+  border-radius: 8px;
+}
+
+.mye-modal .modal-header {
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+}
+
+.mye-modal .modal-footer {
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.mye-modal .btn-close {
+  background-color: transparent;
+  color: white;
+  filter: invert(1);
+}
+
+.form-control-mye {
+  background-color: var(--bg-tertiary);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white !important;
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.form-control-mye:focus {
+  background-color: var(--bg-tertiary);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 8px rgba(0, 240, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .hero-slide {
+    height: 60vh;
+  }
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .slider-thumbs {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-card {
+    flex-direction: column;
+  }
+  .news-card-img {
+    width: 100%;
+    height: 180px;
+  }
+}

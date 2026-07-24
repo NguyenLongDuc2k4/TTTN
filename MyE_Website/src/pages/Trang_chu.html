@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyE - Cổng Game Trực Tuyến Đẳng Cấp</title>
+  <meta name="description" content="Trang chủ cổng game MyE - Trải nghiệm các trò chơi đỉnh cao, nạp game siêu tốc và tham gia cộng đồng game thủ đông đảo nhất.">
+  
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/Trang_chu.css">
+</head>
+<body>
+
+  <!-- 1. Navigation Header -->
+  <nav class="navbar navbar-expand-lg fixed-top mye-navbar">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="Trang_chu.html">
+        <img src="../assets/images/Trang_Chu/logo_Mye.png" alt="MyE Logo" class="mye-logo img-fluid">
+      </a>
+      
+      <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse" data-bs-target="#myeNavbar" aria-controls="myeNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa-solid fa-bars fs-3"></i>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="myeNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="Trang_chu.html">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Tro_choi.html">Trò chơi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Nap_game.html">Nạp game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="MyE_Coin.html">MyE Coin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hỗ trợ</a>
+          </li>
+        </ul>
+        
+        <div class="d-flex align-items-center gap-3">
+          <a href="Dang_nhap.html" class="btn-nav-login">
+            <i class="fa-solid fa-user me-2"></i>Đăng Nhập
+          </a>
+          <a href="Dang_ky.html" class="glow-btn">
+            Đăng Ký
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. Hero Banner Slider Section -->
+  <section class="hero-slider-section">
+    <!-- Slide 1 -->
+    <div class="hero-slide d-none" style="background-image: url('../assets/images/Trang_Chu/Hero_Banner_Trang_Chu/BO_1(1).png');">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="hero-content">
+          <span class="hero-badge">Game Mới</span>
+          <h1 class="hero-title text-uppercase">Chiến Thần<br><span class="text-cyan">Trỗi Dậy</span></h1>
+          <p class="hero-desc">Tham gia vào thế giới hành động nhập vai trực tuyến đồ họa siêu khủng. Đăng ký ngay để nhận gói hỗ trợ tân thủ trị giá 1.000.000đ.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="glow-btn">Chơi ngay</a>
+            <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">Chi tiết</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="hero-slide d-none" style="background-image: url('../assets/images/Trang_Chu/Hero_Banner_Trang_Chu/BO_1(2).png');">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="hero-content">
+          <span class="hero-badge">Sự Kiện Hot</span>
+          <h1 class="hero-title text-uppercase">Huyền Thoại<br><span class="text-purple">Kiếm Thế</span></h1>
+          <p class="hero-desc">Đỉnh cao kiếm hiệp thế hệ mới. Hệ thống môn phái đa dạng, chiến trường Tống Kim rực lửa hàng đêm đang chờ đón các thiếu hiệp.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="glow-btn">Trải nghiệm</a>
+            <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">Xem thể lệ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="hero-slide d-none" style="background-image: url('../assets/images/Trang_Chu/Hero_Banner_Trang_Chu/BO_2(1).png');">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="hero-content">
+          <span class="hero-badge">Giải Đấu</span>
+          <h1 class="hero-title text-uppercase">Đấu Trường<br><span class="text-gold">Vinh Quang</span></h1>
+          <p class="hero-desc">Nơi tụ hội của những cao thủ chiến thuật hàng đầu thế giới. Trực tiếp tranh tài giành giải thưởng lớn lên tới hàng trăm triệu đồng.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="glow-btn">Đăng ký đội</a>
+            <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">Xem lịch đấu</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Slide 4 -->
+    <div class="hero-slide d-none" style="background-image: url('../assets/images/Trang_Chu/Hero_Banner_Trang_Chu/BO_2(2).png');">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="hero-content">
+          <span class="hero-badge">Đại Cập Nhật</span>
+          <h1 class="hero-title text-uppercase">Đế Quốc<br><span class="text-cyan">Rực Lửa</span></h1>
+          <p class="hero-desc">Mở rộng lãnh thổ, ra mắt tướng mới và những tính năng chiến đấu liên server đỉnh cao. Cập nhật ngay hôm nay.</p>
+          <div class="d-flex gap-3">
+            <a href="#" class="glow-btn">Cập nhật ngay</a>
+            <a href="#" class="btn btn-outline-light px-4 py-2 fw-semibold">Chi tiết cập nhật</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide Thumbnails Selection -->
+    <div class="slider-thumbs">
+      <div class="thumb-item active" style="background-image: url('../assets/images/Trang_Chu/Hero_Banner_Trang_Chu/O_Nho(1).png');"></div>
+      <div class="thumb-item" style="background-image: url('../assets/images/Trang_Chu/Hero_Banner_Trang_Chu/O_Nho(2).png');"></div>
+      <div class="thumb-item" style="background-image: url('../assets/images/Trang_Chu/Hero_Banner_Trang_Chu/O_Nho(3).png');"></div>
+      <div class="thumb-item" style="background-image: url('../assets/images/Trang_Chu/Hero_Banner_Trang_Chu/O_Nho(4).png');"></div>
+    </div>
+  </section>
+
+  <!-- 3. Spotlight & Highlight Section -->
+  <section class="spotlight-section">
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-md-8">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">Tiêu Điểm & Tin Nổi Bật</h2>
+            <div class="section-title-line"></div>
+          </div>
+          <p class="text-muted">Đừng bỏ lỡ các tin tức tiêu điểm và sự kiện lớn nhất đang diễn ra tại MyE Portal.</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Big featured spotlight (Tieu_diem.png) -->
+        <div class="col-lg-6">
+          <div class="spotlight-card h-100">
+            <div class="game-info-ribbon">Tiêu Điểm Tuần</div>
+            <div class="spotlight-img-wrap" style="aspect-ratio: auto; height: 350px;">
+              <img src="../assets/images/Trang_Chu/Tieu_diem.png" alt="Spotlight" class="w-100 h-100">
+            </div>
+            <div class="spotlight-body">
+              <span class="spotlight-tag">Sự kiện đặc biệt</span>
+              <h3 class="fw-bold mb-3"><a href="#" class="text-white text-decoration-none hover-cyan">Đại Nhạc Hội Game Thủ MyE 2026</a></h3>
+              <p class="text-muted mb-0">Chương trình tri ân khách hàng quy mô lớn nhất năm với hàng ngàn giftcode cực khủng và quà tặng hiện vật cực trị giá.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Game Hot and Game Moi Highlights -->
+        <div class="col-lg-6 d-flex flex-column gap-4">
+          <!-- Game Hot 02 -->
+          <div class="card bg-transparent border-0 spotlight-card flex-row align-items-center p-3">
+            <div class="col-5 spotlight-img-wrap rounded overflow-hidden">
+              <img src="../assets/images/Trang_Chu/gamehot02.png" alt="Game Hot 02">
+            </div>
+            <div class="col-7 ps-4">
+              <span class="badge bg-danger mb-2">HOT GAME</span>
+              <h4 class="fw-bold mb-2 text-white">Vương Quốc Sấm Sét</h4>
+              <p class="text-muted small mb-3">Tựa game nhập vai chiến thuật hàng đầu châu Á nay đã có mặt trên cổng game MyE.</p>
+              <a href="#" class="text-cyan fw-bold text-decoration-none">Chơi ngay <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+
+          <!-- Game Moi 02 Green -->
+          <div class="card bg-transparent border-0 spotlight-card flex-row align-items-center p-3">
+            <div class="col-5 spotlight-img-wrap rounded overflow-hidden">
+              <img src="../assets/images/Trang_Chu/gamemoi02_green.png" alt="Game Moi Green">
+            </div>
+            <div class="col-7 ps-4">
+              <span class="badge bg-success mb-2">NEW GAME</span>
+              <h4 class="fw-bold mb-2 text-white">Huyền Thoại Xanh Lá</h4>
+              <p class="text-muted small mb-3">Khám phá vùng đất huyền bí với hệ thống triệu hồi thú cưng phong phú và thú vị.</p>
+              <a href="#" class="text-cyan fw-bold text-decoration-none">Tìm hiểu <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. News Section -->
+  <section class="news-section">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-md-6">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">Bản Tin MyE</h2>
+            <div class="section-title-line"></div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex justify-content-md-end mt-3 mt-md-0">
+          <div class="news-tab-nav">
+            <button class="news-tab-btn active" data-filter="all">Tất cả</button>
+            <button class="news-tab-btn" data-filter="update">Cập nhật</button>
+            <button class="news-tab-btn" data-filter="event">Sự kiện</button>
+            <button class="news-tab-btn" data-filter="guide">Hướng dẫn</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- News Card 1 -->
+        <div class="col-md-4 news-item-col" data-category="update">
+          <div class="card bg-dark border-0 h-100 overflow-hidden">
+            <img src="../assets/images/Trang_Chu/Tin_tuc/Tin_tuc_1.png" class="card-img-top news-card-img" alt="News 1">
+            <div class="card-body d-flex flex-column justify-content-between p-4">
+              <div>
+                <span class="text-cyan d-block small mb-2"><i class="fa-regular fa-clock me-2"></i>24/07/2026</span>
+                <h5 class="fw-bold mb-3"><a href="#" class="text-white text-decoration-none">Cập nhật phiên bản mới: Vương Quốc Băng Giá</a></h5>
+                <p class="text-muted small">Phiên bản 2.5 mang lại hệ thống bản đồ tuyết rơi và các boss hầm ngục băng giá cực kỳ thử thách.</p>
+              </div>
+              <a href="#" class="text-cyan text-decoration-none mt-3 small fw-bold">Chi tiết <i class="fa-solid fa-chevron-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Card 2 -->
+        <div class="col-md-4 news-item-col" data-category="event">
+          <div class="card bg-dark border-0 h-100 overflow-hidden">
+            <img src="../assets/images/Trang_Chu/Tin_tuc/Tin_tuc_2.png" class="card-img-top news-card-img" alt="News 2">
+            <div class="card-body d-flex flex-column justify-content-between p-4">
+              <div>
+                <span class="text-cyan d-block small mb-2"><i class="fa-regular fa-clock me-2"></i>22/07/2026</span>
+                <h5 class="fw-bold mb-3"><a href="#" class="text-white text-decoration-none">Sự kiện Đua Top Tân Thủ - Nhận Coin cực đã</a></h5>
+                <p class="text-muted small">Khởi tranh đua top máy chủ mới với phần thưởng lên đến 50.000 MyE Coin dành cho người chơi xuất sắc nhất.</p>
+              </div>
+              <a href="#" class="text-cyan text-decoration-none mt-3 small fw-bold">Chi tiết <i class="fa-solid fa-chevron-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Card 3 -->
+        <div class="col-md-4 news-item-col" data-category="guide">
+          <div class="card bg-dark border-0 h-100 overflow-hidden">
+            <img src="../assets/images/Trang_Chu/Tin_tuc/Tin_tuc_3.png" class="card-img-top news-card-img" alt="News 3">
+            <div class="card-body d-flex flex-column justify-content-between p-4">
+              <div>
+                <span class="text-cyan d-block small mb-2"><i class="fa-regular fa-clock me-2"></i>18/07/2026</span>
+                <h5 class="fw-bold mb-3"><a href="#" class="text-white text-decoration-none">Hướng dẫn liên kết bảo mật tài khoản MyE OTP</a></h5>
+                <p class="text-muted small">Đảm bảo an toàn tuyệt đối cho tài khoản và số dư ví Coin của bạn bằng hệ thống bảo mật MyE OTP mới.</p>
+              </div>
+              <a href="#" class="text-cyan text-decoration-none mt-3 small fw-bold">Chi tiết <i class="fa-solid fa-chevron-right ms-1"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Games Grid Section -->
+  <section class="games-section">
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-md-8">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">Kho Trò Chơi</h2>
+            <div class="section-title-line"></div>
+          </div>
+          <p class="text-muted">Danh sách các trò chơi trực tuyến đang vận hành chính thức tại MyE Portal.</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Game 1 (CARD(1).png) -->
+        <div class="col-md-6 col-lg-3">
+          <div class="game-card">
+            <img src="../assets/images/Trang_Chu/Ds_Game/CARD(1).png" alt="Game Card 1">
+            <div class="game-card-overlay">
+              <h4 class="game-card-title">Thiếu Niên Tam Quốc</h4>
+              <span class="game-card-genre">Chiến thuật thẻ tướng</span>
+              <a href="#" class="btn btn-sm btn-cyan glow-btn btn-play-card w-100">Vào Game</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 2 (CARD(2).png) -->
+        <div class="col-md-6 col-lg-3">
+          <div class="game-card">
+            <img src="../assets/images/Trang_Chu/Ds_Game/CARD(2).png" alt="Game Card 2">
+            <div class="game-card-overlay">
+              <h4 class="game-card-title">Mộng Kiếm Hiệp</h4>
+              <span class="game-card-genre">Nhập vai võ lâm</span>
+              <a href="#" class="btn btn-sm btn-cyan glow-btn btn-play-card w-100">Vào Game</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 3 (CARD(3).png) -->
+        <div class="col-md-6 col-lg-3">
+          <div class="game-card">
+            <img src="../assets/images/Trang_Chu/Ds_Game/CARD(3).png" alt="Game Card 3">
+            <div class="game-card-overlay">
+              <h4 class="game-card-title">Hỏa Long Đấu Ký</h4>
+              <span class="game-card-genre">Manga MMORPG</span>
+              <a href="#" class="btn btn-sm btn-cyan glow-btn btn-play-card w-100">Vào Game</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Game 4 (CARD(4).png) -->
+        <div class="col-md-6 col-lg-3">
+          <div class="game-card">
+            <img src="../assets/images/Trang_Chu/Ds_Game/CARD(4).png" alt="Game Card 4">
+            <div class="game-card-overlay">
+              <h4 class="game-card-title">Vương Quốc Huyền Bí</h4>
+              <span class="game-card-genre">Chiến thuật sinh tồn</span>
+              <a href="#" class="btn btn-sm btn-cyan glow-btn btn-play-card w-100">Vào Game</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Footer Section (Cuoi_Trang_Chu.png) -->
+  <footer class="mye-footer">
+    <!-- Partner/Bottom banner wrapper -->
+    <div class="container pt-5 text-center">
+      <img src="../assets/images/Trang_Chu/Cuoi_Trang_Chu.png" alt="Partner Banner" class="img-fluid rounded border border-secondary shadow-lg opacity-90 hover-opacity-100 transition-all duration-300">
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6">
+            <img src="../assets/images/Trang_Chu/logo_Mye.png" alt="MyE Logo" class="footer-logo">
+            <p class="footer-about small">MyE Portal là cổng game trực tuyến uy tín chuyên cung cấp các trò chơi MMO nhập vai, đấu tướng chiến thuật thế hệ mới độc quyền và chuyên nghiệp tại Việt Nam.</p>
+            <div class="social-links mt-4">
+              <a href="#" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" class="social-btn"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" class="social-btn"><i class="fa-brands fa-discord"></i></a>
+              <a href="#" class="social-btn"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Trò chơi</h5>
+            <ul class="footer-links small">
+              <li><a href="#">Hành Động Nhập Vai</a></li>
+              <li><a href="#">Đấu Tướng Chiến Thuật</a></li>
+              <li><a href="#">Casual & Giải Trí</a></li>
+              <li><a href="#">Game Mới Nhất</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-2 col-md-6">
+            <h5 class="footer-title">Dịch vụ</h5>
+            <ul class="footer-links small">
+              <li><a href="#">Cổng Nạp MyE Coin</a></li>
+              <li><a href="#">Lịch Sử Giao Dịch</a></li>
+              <li><a href="#">Trung Tâm CSKH</a></li>
+              <li><a href="#">Điều Khoản Dịch Vụ</a></li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-title">Liên hệ</h5>
+            <p class="small mb-2"><i class="fa-solid fa-location-dot text-cyan me-2"></i>Tầng 5, Tòa Nhà Công Nghệ, Quận 1, TP. HCM</p>
+            <p class="small mb-2"><i class="fa-solid fa-phone text-cyan me-2"></i>Hotline: 1900 6789 (8h00 - 22h00)</p>
+            <p class="small mb-2"><i class="fa-solid fa-envelope text-cyan me-2"></i>Email: cskh@mye.com.vn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container text-center">
+        <p class="small mb-0">&copy; 2026 MyE Portal. Tất cả quyền được bảo lưu. Phát hành và vận hành bởi NPH MyE.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 7. Login Modal -->
+  <div class="modal fade mye-modal" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold text-uppercase" id="loginModalLabel">Đăng Nhập Tài Khoản</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="mb-3">
+              <label for="loginUser" class="form-label small fw-semibold text-muted">Tên tài khoản</label>
+              <input type="text" class="form-control form-control-mye" id="loginUser" placeholder="Nhập tên đăng nhập hoặc email">
+            </div>
+            <div class="mb-3">
+              <label for="loginPass" class="form-label small fw-semibold text-muted">Mật khẩu</label>
+              <input type="password" class="form-control form-control-mye" id="loginPass" placeholder="Nhập mật khẩu">
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="rememberMe">
+                <label class="form-check-label small text-muted" for="rememberMe">Ghi nhớ đăng nhập</label>
+              </div>
+              <a href="#" class="small text-cyan text-decoration-none">Quên mật khẩu?</a>
+            </div>
+            <button type="submit" class="glow-btn w-100">Đăng Nhập Ngay</button>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <span class="small text-muted">Chưa có tài khoản? <a href="#" class="text-cyan text-decoration-none" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Đăng ký ngay</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. Register Modal -->
+  <div class="modal fade mye-modal" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold text-uppercase" id="registerModalLabel">Đăng Ký Tài Khoản</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form>
+            <div class="mb-3">
+              <label for="regUser" class="form-label small fw-semibold text-muted">Tên tài khoản</label>
+              <input type="text" class="form-control form-control-mye" id="regUser" placeholder="Tên đăng nhập viết liền, không dấu">
+            </div>
+            <div class="mb-3">
+              <label for="regEmail" class="form-label small fw-semibold text-muted">Địa chỉ Email</label>
+              <input type="email" class="form-control form-control-mye" id="regEmail" placeholder="Nhập email chính chủ của bạn">
+            </div>
+            <div class="mb-3">
+              <label for="regPass" class="form-label small fw-semibold text-muted">Mật khẩu</label>
+              <input type="password" class="form-control form-control-mye" id="regPass" placeholder="Tối thiểu 6 ký tự">
+            </div>
+            <div class="mb-4">
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                <label class="form-check-label small text-muted" for="agreeTerms">Tôi đồng ý với các <a href="#" class="text-cyan text-decoration-none">Điều khoản sử dụng dịch vụ</a> của MyE.</label>
+              </div>
+            </div>
+            <button type="submit" class="glow-btn w-100">Đăng Ký Ngay</button>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <span class="small text-muted">Đã có tài khoản? <a href="#" class="text-cyan text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Đăng nhập</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6Rz8q32CmdggEjh35Imt9aJ7AHyLD69Npy4HI+N9tlLC533C5MTk45IPF895Dk9" crossorigin="anonymous"></script>
+  
+  <!-- Custom Javascript -->
+  <script src="../assets/js/Header_active.js"></script>
+  <script src="../assets/js/Trang_chu.js"></script>
+</body>
+</html>
