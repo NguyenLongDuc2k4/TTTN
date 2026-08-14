@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+
+# Database files
+backend/prisma/dev.db
+backend/prisma/dev.db-journal
+
+# Uploads (user-generated files)
+backend/uploads/
+
+# Build outputs
+frontend/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
