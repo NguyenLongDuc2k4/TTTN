@@ -55,7 +55,7 @@ const AdminLayout = () => {
           <div className="flex items-center gap-2">
             <span className="text-2xl">🍛</span>
             <div className="text-left">
-              <h2 className="font-extrabold text-sm text-slate-850 dark:text-white uppercase tracking-wider">Cơm Bé Huệ</h2>
+              <h2 className="font-extrabold text-sm text-slate-850 dark:text-white uppercase tracking-wider">Shop Đồ Ăn</h2>
               <span className="text-[10px] text-slate-400 font-bold uppercase dark:text-slate-500">Khu vực quản trị</span>
             </div>
           </div>

@@ -7,10 +7,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-            <span className="text-primary mr-2">🍛</span> Quán Cơm Bé Huệ
+            <span className="text-primary mr-2">🍛</span> Website Bán Đồ Ăn
           </h3>
           <p className="text-slate-400 text-sm leading-relaxed">
-            Mang đến những bữa cơm trưa văn phòng, cơm gia đình nóng hổi, ngon sạch như mẹ nấu. Cam kết nguyên liệu tươi sạch 100% mỗi ngày.
+            Mang đến những bữa ăn ngon sạch, đầy đủ dinh dưỡng, đảm bảo vệ sinh an toàn thực phẩm. Cam kết nguyên liệu tươi sạch 100% mỗi ngày.
           </p>
         </div>
         <div>
@@ -31,7 +31,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h4 className="text-lg font-semibold text-white mb-4">Chính sách của quán</h4>
+          <h4 className="text-lg font-semibold text-white mb-4">Chính sách của chúng tôi</h4>
           <ul className="space-y-2 text-sm text-slate-400">
             <li><a href="#" className="hover:text-primary transition-colors">Chính sách giao hàng nhanh</a></li>
             <li><a href="#" className="hover:text-primary transition-colors">Đảm bảo an toàn thực phẩm</a></li>
@@ -40,7 +40,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 mt-8 pt-6 border-t border-slate-800 text-center text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p>&copy; {new Date().getFullYear()} Quán Cơm Bé Huệ. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Website Bán Đồ Ăn. All rights reserved.</p>
         <p className="flex items-center">
           Made with <Heart size={12} className="text-primary mx-1 fill-primary" /> for a delicious meal.
         </p>

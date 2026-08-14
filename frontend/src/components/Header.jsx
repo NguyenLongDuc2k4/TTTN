@@ -68,7 +68,7 @@ const Header = () => {
                 <span className="text-2xl">🍛</span>
               )}
               <span className="font-bold text-xl tracking-tight text-slate-850 dark:text-white">
-                Cơm <span className="text-primary">Bé Huệ</span>
+                Food <span className="text-primary">Shop</span>
               </span>
             </Link>
           </div>
